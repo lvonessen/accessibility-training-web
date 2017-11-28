@@ -18,7 +18,7 @@ import { Unknown } from './unknown';
 
 import 'bootstrap';
 
-var webRoot = "/ajko";
+var webRoot = "/";
 
 // Polyfill startsWith
 if (!String.prototype.startsWith) {
