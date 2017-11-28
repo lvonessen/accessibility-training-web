@@ -2,7 +2,7 @@
 	"name": "UWFacultyPage",
 	"version": "1.0.0",
 	"scripts": {
-		"build": "browserify -t [ babelify --presets [ react ] ] src/app.js | uglifyjs > build/app.js",
+		"build": "browserify -t [ babelify --presets [ react ] ] src/app.js | uglifyjs > build/app.js; echo done",
 		"watch": "watch 'npm run build' src"
 	},
 	"devDependencies": {
