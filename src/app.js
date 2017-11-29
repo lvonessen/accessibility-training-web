@@ -9,6 +9,7 @@ import { Students } from './students';
 import { Header } from './header';
 import { Projects } from './projects';
 import { Topic } from './topic';
+import { Intro } from './intro';
 import { Reading } from './reading';
 import { Advice } from './advice';
 import { Teaching } from './teaching';
@@ -18,6 +19,10 @@ import { CER } from './cer';
 import { Unknown } from './unknown';
 
 import 'bootstrap';
+
+var topics = require('./topics');
+var courses = require('./courses');
+
 
 var webRoot = "/";
 
@@ -32,15 +37,15 @@ if (!String.prototype.startsWith) {
 class App extends React.Component {
 	render() {
 		
-		var currentRoute = this.props.location.pathname;
+		var currentRoute = this.props.location.pathname;		
 		
 		return (
 			<div className="container">
 				{currentRoute === "/cv" ? null : <Header path={currentRoute}/>}
 				<Switch>
-					<Route exact path="/" component={Topic}/>
+					<Route exact path="/" component={Intro}/>
 					<Route path="/proj" component={Projects}/>
-					<Route path="/bio" component={Biography}/>
+					<Route path="/webdev" component={Topic}/>
 					<Route path="/publications/:paper?" component={Publications}/>
 					<Route path="/impact" component={Impact}/>
 					<Route path="/reading" component={Reading}/>

@@ -3,7 +3,7 @@
 		"id": "intro",
 		"name": "Introduction to Accessibility",
 		"flavormap": {
-				"default": [ "lo_what" ],
+				"default": [ "lo_what", "lo_kinds" ],
 				"full": [ "lo_what", "lo_kinds", "lo_div", "lo_who", "lo_num", "lo_models", "lo_tech_models" ]
 		}
 	}

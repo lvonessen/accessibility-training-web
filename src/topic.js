@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 
 import { LOTile }  from './lotile';
 
-var topics = require('./topics');
 var subtopics = require('./subtopics');
+var topics = require('./topics');
+var courses = require('./courses');
 
 // Sort the publications by decreasing year.
 /*pubs = pubs.slice(0).sort((a, b)=>{ 
@@ -19,10 +20,13 @@ class Topic extends React.Component {
 
 	render() {
 		
-		// assuming we were provided with topic, arg, and flavor
-		var topic = topics['intro'];
-		var arg = "Blah blah blah blah blah";
-		var flavor = "default";
+		// assuming we were provided with topic id, arg, and flavor		
+		var webdev = courses["webdev"];
+		var topictuple = webdev.topics[0];		
+		
+		var topic = topics[topictuple.id];
+		var arg = topictuple.arg;
+		var flavor = topictuple.flavor;
 		
 		// list of subtopic names
 		var subtopicset = topic.flavormap[flavor];
@@ -30,7 +34,7 @@ class Topic extends React.Component {
 		console.log(flavor);
 		console.log(subtopicset);
 
-		// Create a list of publications, inserting year headers.
+		// Create a list of subtopics
 		var rows = [];
 		console.log(subtopicset.length);
 		for (var i = 0; i < subtopicset.length; i++) {

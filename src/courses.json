@@ -1,15 +1,15 @@
-[
-	{
+{
+	"webdev": {
 		"id": "webdev",
 		"name": "Web Development",
 		"area": "applications",
 		"descrip": "Something about common topics in web development courses.",
 		"topics": [
-				{
-					"id": "intro",
-					"arg": "explain why/how intro topic relates to web dev.",
-					"flavor": "default"
-				}
-			]
+			{
+				"id": "intro",
+				"arg": "It's important to define accessibility to your students because they may not have seen it before and knowing about it is becoming a requirement in modern web development. Etc etc (argument for topic i.e. group of LOs)",
+				"flavor": "default"
+			}
+		]
 	}
-]
+}

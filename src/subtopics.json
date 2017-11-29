@@ -2,7 +2,14 @@
 	"lo_what": {
 		"id": "lo_what",
 		"name": "Accessibility is about designing to take into account all kinds of abilities",
-		"arg": "This is important because...",
+		"arg": "This is important to web development because... (LO argument)",
+		"material": [ "point 1", "point 2", ["subpoint1", "subpoint2"], "point 3" ],
+		"options": [ "brief", "indepth", "activity" ]
+	},
+	"lo_kinds": {
+		"id": "lo_kinds",
+		"name": "There are many different kinds of disabilities (vision, hearing, cognitive, motor, etc), ranging from situational to permanent",
+		"arg": "This is important to web development because... (LO argument)",
 		"material": [ "point 1", "point 2", ["subpoint1", "subpoint2"], "point 3" ],
 		"options": [ "brief", "indepth", "activity" ]
 	}
