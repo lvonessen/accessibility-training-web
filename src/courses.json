@@ -1,0 +1,15 @@
+[
+	{
+		"id": "webdev",
+		"name": "Web Development",
+		"area": "applications",
+		"descrip": "Something about common topics in web development courses.",
+		"topics": [
+				{
+					"id": "intro",
+					"arg": "explain why/how intro topic relates to web dev.",
+					"flavor": "default"
+				}
+			]
+	}
+]

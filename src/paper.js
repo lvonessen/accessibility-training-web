@@ -52,8 +52,8 @@ class Paper extends React.Component {
 					{title}
 					<div className="details">
 						{authors} ({this.props.year})
-						<br/><small><i>{this.props.source}</i>{this.props.pages == '' ? "." : ", " + this.props.pages + "."}</small>						{contribution}
-					</div>
+						<br/><small><i>{this.props.source}</i>{this.props.pages == '' ? "." : ", " + this.props.pages + "."}</small>                  {contribution}
+					</div> {/* "contribution" here is a local variable, which packages a papers contribution into its own styled div. Do you know how long it took me to figure out why prop.contribution was showing up on its own line???*/}
 				</div>
 			)
 			

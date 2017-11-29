@@ -8,6 +8,7 @@ import { Impact } from './impact';
 import { Students } from './students';
 import { Header } from './header';
 import { Projects } from './projects';
+import { Topic } from './topic';
 import { Reading } from './reading';
 import { Advice } from './advice';
 import { Teaching } from './teaching';
@@ -37,7 +38,8 @@ class App extends React.Component {
 			<div className="container">
 				{currentRoute === "/cv" ? null : <Header path={currentRoute}/>}
 				<Switch>
-					<Route exact path="/" component={Projects}/>
+					<Route exact path="/" component={Topic}/>
+					<Route path="/proj" component={Projects}/>
 					<Route path="/bio" component={Biography}/>
 					<Route path="/publications/:paper?" component={Publications}/>
 					<Route path="/impact" component={Impact}/>

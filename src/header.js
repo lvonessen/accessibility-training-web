@@ -9,20 +9,16 @@ class Header extends React.Component {
 		
 		return (
 			<div>
-				<ContactInfo/>
+				{/* <ContactInfo/> */}
+				<h1>Accessibility Curriculum Resources</h1>
 				<div className="header">
 			        <nav>
 						<ul className="nav nav-pills">
-							<li role="presentation" className={path === "/" ? "active" : ""}><Link to="/">Research</Link></li>
-							<li role="presentation" className={path.startsWith("/publications") ? "active" : ""}><Link to="/publications">Papers</Link></li>
-							<li role="presentation" className={path.startsWith("/impact") ? "active" : ""}><Link to="/impact">Impact</Link></li>
-							<li role="presentation" className={path.startsWith("/students") ? "active" : ""}><Link to="/students">Students</Link></li>
-							<li role="presentation" className={path.startsWith("/advice") ? "active" : ""}><Link to="/advice">Advice</Link></li>
-							<li role="presentation" className={path.startsWith("/teaching") ? "active" : ""}><Link to="/teaching">Teaching</Link></li>
-							<li role="presentation" className={path.startsWith("/books") ? "active" : ""}><Link to="/books">Books</Link></li>
-							<li role="presentation" className={path.startsWith("/bio") ? "active" : ""}><Link to="/bio">Bio</Link></li>
-							<li role="presentation"><Link to="/cv">CV</Link></li>
-							<li role="presentation"><a href="https://medium.com/bits-and-behavior" target='_blank'>Blog</a></li>
+							<li role="presentation" className={path === "/" ? "active" : ""}><Link to="/">Introduction</Link></li>
+							<li role="presentation" className={path.startsWith("/publications") ? "active" : ""}><Link to="/publications">Choose your courses</Link></li>
+							<li role="presentation" className={path.startsWith("/impact") ? "active" : ""}><Link to="/impact">Web Dev</Link></li>
+							<li role="presentation" className={path.startsWith("/students") ? "active" : ""}><Link to="/students">Get your slides</Link></li>
+							{/*<li role="presentation"><a href="https://medium.com/bits-and-behavior" target='_blank'>Blog</a></li>*/}
 						</ul>
 			        </nav>
 			    </div>

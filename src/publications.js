@@ -43,6 +43,7 @@ class Publications extends React.Component {
 				rows.push(<h3 key={pub.year}>{pub.year}</h3>);
 			lastYear = pub.year;
 			
+			//................................................WHETHER they're equal
 			rows.push(<Paper {...pubs[i]} key={i} highlight={ paperToHighlight === pubs[i].id } />);
 		}
 		return (

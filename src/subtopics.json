@@ -1,0 +1,9 @@
+{
+	"lo_what": {
+		"id": "lo_what",
+		"name": "Accessibility is about designing to take into account all kinds of abilities",
+		"arg": "This is important because...",
+		"material": [ "point 1", "point 2", ["subpoint1", "subpoint2"], "point 3" ],
+		"options": [ "brief", "indepth", "activity" ]
+	}
+}
