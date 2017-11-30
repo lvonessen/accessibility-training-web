@@ -9,6 +9,7 @@ import { Students } from './students';
 import { Header } from './header';
 import { Projects } from './projects';
 import { Topic } from './topic';
+import { Course } from './course';
 import { Intro } from './intro';
 import { Reading } from './reading';
 import { Advice } from './advice';
@@ -52,7 +53,7 @@ class App extends React.Component {
 				{currentRoute === "/cv" ? null : <Header path={currentRoute} courses={this.state.courses}/>}
 				<Switch>
 					<Route exact path="/" component={Intro}/>
-					{/* the course picking page will need to get passed in the course change function 
+					{/* the course picking page will need to get passed in the course change function */}
 					<Route path="/proj" component={Projects}/>
 					<Route path="/publications/:paper?" component={Publications}/>
 					<Route path="/impact" component={Impact}/>
@@ -63,9 +64,9 @@ class App extends React.Component {
 					<Route path="/students/:student?" component={Students}/>
 					<Route path="/cv" component={Vita}/>
 					<Route path="/cer" component={CER}/>
-					{/* has to be at the end because it will match anything 
+					{/* has to be at the end because it will match anything */}
 					<Route path="/:course?" component={Course}/>
-					*/}
+					
 					{/* would have to be at the end because it will 
 						 match anything, but course does instead */}
 					<Route path="*" component={Unknown}/>

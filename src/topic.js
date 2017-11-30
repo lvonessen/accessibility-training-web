@@ -20,8 +20,12 @@ class Topic extends React.Component {
 
 	render() {
 		
+		var coursetopics = this.props.coursetopics
+		var courseid = this.props.match.params.course;
+		var topicid = this.props.match.params.topic;
+		
 		// assuming we were provided with topic id, arg, and flavor		
-		var webdev = courses["webdev"];
+		var course = courses[courseid];
 		var topictuple = webdev.topics[0];		
 		
 		var topic = topics[topictuple.id];
@@ -31,8 +35,8 @@ class Topic extends React.Component {
 		// list of subtopic names
 		var subtopicset = topic.flavormap[flavor];
 		
-		console.log(flavor);
-		console.log(subtopicset);
+		//console.log(flavor);
+		//console.log(subtopicset);
 
 		// Create a list of subtopics
 		var rows = [];
@@ -40,9 +44,9 @@ class Topic extends React.Component {
 		for (var i = 0; i < subtopicset.length; i++) {
 			
 			var subtopicid = subtopicset[i];
-			console.log(subtopicid);
+			//console.log(subtopicid);
 			var subtopic = subtopics[subtopicid];
-			console.log(subtopic);
+			//console.log(subtopic);
 			
 			rows.push(<LOTile {...subtopic} id={subtopicid} key={subtopicid} />);
 		}
