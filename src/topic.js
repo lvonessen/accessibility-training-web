@@ -20,17 +20,10 @@ class Topic extends React.Component {
 
 	render() {
 		
-		var coursetopics = this.props.coursetopics
-		var courseid = this.props.match.params.course;
-		var topicid = this.props.match.params.topic;
-		
-		// assuming we were provided with topic id, arg, and flavor		
-		var course = courses[courseid];
-		var topictuple = webdev.topics[0];		
-		
-		var topic = topics[topictuple.id];
-		var arg = topictuple.arg;
-		var flavor = topictuple.flavor;
+		var courseid = this.props.courseid;
+		var topic = topics[this.props.id];
+		var arg = this.props.arg;
+		var flavor = this.props.flavor;
 		
 		// list of subtopic names
 		var subtopicset = topic.flavormap[flavor];

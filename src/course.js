@@ -27,7 +27,7 @@ class Course extends React.Component {
 			/* https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf 
 				tells how to pass extra props to the component */
 			rows.push( <Route key={topic.id} path={"/"+courseid+"/"+topic.id}
-					render={() => (<Topic {...topic}/>)}
+					render={() => (<Topic {...topic} courseid={courseid}/>)}
 					/> );
 		}
 		

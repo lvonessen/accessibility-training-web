@@ -6,13 +6,12 @@ var topics = require('./topics');
 class CourseHeader extends React.Component {
 	render() {
 		
-		
 		console.log("all hail the great course header.");
 		
 		var path = this.props.path || "";
 		
 		var course = this.props.course;
-				
+		
 		var rows = [];
 		for (var i=0; i < course.topics.length; i++){
 			var topicid = course.topics[i].id
