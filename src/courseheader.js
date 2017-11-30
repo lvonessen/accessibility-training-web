@@ -22,7 +22,7 @@ class CourseHeader extends React.Component {
 		return (
 			<div>
 				{/* <ContactInfo/> */}
-				<div className="header2">
+				<div className="header">
 			        <nav>
 						<ul className="nav nav-pills">
 							{rows}
