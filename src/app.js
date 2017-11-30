@@ -56,11 +56,7 @@ class App extends React.Component {
 					{/* the course picking page will need to get passed in the course change function */}
 					<Route path="/proj" component={Projects}/>
 					<Route path="/publications/:paper?" component={Publications}/>
-					<Route path="/impact" component={Impact}/>
-					<Route path="/reading" component={Reading}/>
-					<Route path="/advice" component={Advice}/>
-					<Route path="/teaching" component={Teaching}/>
-					<Route path="/books" component={Books}/>
+					<Route path="/slides" component={Unknown}/>
 					<Route path="/students/:student?" component={Students}/>
 					<Route path="/cv" component={Vita}/>
 					<Route path="/cer" component={CER}/>
