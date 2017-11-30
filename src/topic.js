@@ -33,7 +33,7 @@ class Topic extends React.Component {
 
 		// Create a list of subtopics
 		var rows = [];
-		console.log(subtopicset.length);
+		//console.log(subtopicset.length);
 		for (var i = 0; i < subtopicset.length; i++) {
 			
 			var subtopicid = subtopicset[i];
