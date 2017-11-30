@@ -18,12 +18,10 @@ class NestedList extends React.Component {
 	
 	render() {
 		if (typeof this.props.list === 'string' ){
-			console.log(this.props.id);
 			return (<li key={this.props.id}> {this.props.list} </li>);
 		} else {			
 			var rows = [];
 			for (var i=0; i < this.props.list.length; i++){
-				console.log(this.props.id.concat(i));
 				rows.push (<NestedList list={this.props.list[i]} id={this.props.id.concat(i)} key={this.props.id.concat(i)}/>);
 			}
 			return (

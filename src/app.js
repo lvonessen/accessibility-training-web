@@ -20,10 +20,6 @@ import { Unknown } from './unknown';
 
 import 'bootstrap';
 
-var topics = require('./topics');
-var courses = require('./courses');
-
-
 var webRoot = "/";
 
 // Polyfill startsWith
@@ -35,17 +31,29 @@ if (!String.prototype.startsWith) {
 }
 
 class App extends React.Component {
+	
+	constructor(props) {
+		super(props);
+		this.handleCourseChange = this.handleCourseChange.bind(this);
+		// eventually courses will start out empty
+		this.state = {courses: ["webdev","class2"]};
+	}
+	
+	handleCourseChange(newCourses) {
+		this.setState({courses: newCourses});
+	}	
+	
 	render() {
 		
 		var currentRoute = this.props.location.pathname;		
 		
 		return (
 			<div className="container">
-				{currentRoute === "/cv" ? null : <Header path={currentRoute}/>}
+				{currentRoute === "/cv" ? null : <Header path={currentRoute} courses={this.state.courses}/>}
 				<Switch>
 					<Route exact path="/" component={Intro}/>
+					{/* the course picking page will need to get passed in the course change function 
 					<Route path="/proj" component={Projects}/>
-					<Route path="/webdev" component={Topic}/>
 					<Route path="/publications/:paper?" component={Publications}/>
 					<Route path="/impact" component={Impact}/>
 					<Route path="/reading" component={Reading}/>
@@ -55,6 +63,11 @@ class App extends React.Component {
 					<Route path="/students/:student?" component={Students}/>
 					<Route path="/cv" component={Vita}/>
 					<Route path="/cer" component={CER}/>
+					{/* has to be at the end because it will match anything 
+					<Route path="/:course?" component={Course}/>
+					*/}
+					{/* would have to be at the end because it will 
+						 match anything, but course does instead */}
 					<Route path="*" component={Unknown}/>
 				</Switch>
 			</div>
