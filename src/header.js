@@ -24,7 +24,7 @@ class Header extends React.Component {
 			        <nav>
 						<ul className="nav nav-pills">
 							<li key="intro" role="presentation" className={path === "/" ? "active" : ""}><Link to="/">Introduction</Link></li>
-							<li key="courses" role="presentation" className={path.startsWith("/publications") ? "active" : ""}><Link to="/publications">Choose your courses</Link></li>
+							<li key="coursechoice" role="presentation" className={path.startsWith("/publications") ? "active" : ""}><Link to="/coursechoice">Choose your courses</Link></li>
 							{rows}
 							<li key="slides" role="presentation" className={path.startsWith("/slides") ? "active" : ""}><Link to="/slides">Get your slides</Link></li>
 							{/*<li role="presentation"><a href="https://medium.com/bits-and-behavior" target='_blank'>Blog</a></li>*/}

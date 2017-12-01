@@ -8,17 +8,15 @@ import { Unknown } from './unknown';
 
 import 'bootstrap';
 
-var courses = require('./courses');
-
 class Course extends React.Component {
 	render() {
 		
 		var currentRoute = this.props.location.pathname;
 				
 		// copied from the students thing
-		var courseid = this.props.match.params.course;
+		var courseid = this.props.id;
 				
-		var topics = courses[courseid].topics;
+		var topics = this.props.topics;
 		
 		var rows = [];
 		const topic0 = topics[0];

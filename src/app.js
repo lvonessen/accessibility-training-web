@@ -5,6 +5,7 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { Biography } from './bio';
 import { Publications } from './publications';
 import { Impact } from './impact';
+import { CourseChoice } from './coursechoice';
 import { Students } from './students';
 import { Header } from './header';
 import { Projects } from './projects';
@@ -22,6 +23,7 @@ import { Unknown } from './unknown';
 import 'bootstrap';
 
 var webRoot = "/";
+var courses = require('./courses');
 
 // Polyfill startsWith
 if (!String.prototype.startsWith) {
@@ -37,7 +39,7 @@ class App extends React.Component {
 		super(props);
 		this.handleCourseChange = this.handleCourseChange.bind(this);
 		// eventually courses will start out empty
-		this.state = {courses: ["webdev","class2"]};
+		this.state = {courses: []};
 	}
 	
 	handleCourseChange(newCourses) {
@@ -46,7 +48,13 @@ class App extends React.Component {
 	
 	render() {
 		
-		var currentRoute = this.props.location.pathname;		
+		var currentRoute = this.props.location.pathname;
+		
+		var courseRoutes = [];
+		for (var i=0; i<courses.length; i++){
+			courseRoutes.push(<Route key={courses[i].id} path={"/"+courses[i].id} render={() => (<Course {...courses[i]}/>)}
+					/>);
+		}
 		
 		return (
 			<div className="container">
@@ -55,6 +63,10 @@ class App extends React.Component {
 					<Route exact path="/" component={Intro}/>
 					{/* the course picking page will need to get passed in the course change function */}
 					<Route path="/proj" component={Projects}/>
+					<Route path={"/coursechoice"}
+					render={() => (<CourseChoice update={this.handleCourseChange}/>)}
+					/>
+					{courseRoutes}
 					<Route path="/publications/:paper?" component={Publications}/>
 					<Route path="/slides" component={Unknown}/>
 					<Route path="/students/:student?" component={Students}/>
