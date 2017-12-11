@@ -1,10 +1,84 @@
+ <h2>  <strong> Exposing structure </strong>  </h2> 
+ <p>  <span style="font-weight: 400;"> We use structure to organize text all the time in our daily lives--books are organized into chapters, papers into sections, slides into bulleted lists, italics to place emphasis on certain words, etc. Frequently, this is conveyed visually through for example headers with larger font or circles before list elements. However, this structure is especially important when people can&rsquo;t see the page, because the two dimensional page that eyes can easily skim otherwise becomes a linear stream of words read aloud by a screen reader (software commonly used by people who are blind or have dyslexia). However, there are ways to expose this structure to screen readers, allowing more targeted navigation of content. </span>  </p> 
  <ul> 
- <li style="font-weight: 400;">  <span style="font-weight: 400;"> Hi </span>  </li> 
- <li style="font-weight: 400;">  <span style="font-weight: 400;"> Hi2 </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> LO_SR: Screen readers read structured &ldquo; </span>  <span style="font-weight: 400;"> documents&rdquo; </span>  <span style="font-weight: 400;">  as speech </span>  </li> 
  <ul> 
- <li style="font-weight: 400;">  <span style="font-weight: 400;"> Hi sub 1 </span>  </li> 
- <li style="font-weight: 400;">  <span style="font-weight: 400;"> Hi sub 2 </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Screen readers read structured &ldquo;documents&rdquo; as speech </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> &ldquo;Documents&rdquo; includes things we think of as documents (mostly text, maybe some headings and images) but also more complicated things like web pages or user interfaces </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Screen readers expose structure (headings, lists, menus, etc) in different ways which often enable easier navigation to desired content </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Expert screen reader users form their own ways of using them (e.g. at high playback speeds) that are not necessarily comparable to novice screen reader users </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> (testing something yourself is different from having an expert screen reader user do it) </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> (video demo for them or students?) </span>  </li> 
  </ul> 
- <li style="font-weight: 400;">  <span style="font-weight: 400;"> Hi 3 </span>  </li> 
  </ul> 
- <p> &nbsp; </p> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Screen readers are a  </span>  <strong> common </strong>  <span style="font-weight: 400;">  way that  </span>  <strong> blind or low-vision </strong>  <span style="font-weight: 400;">  people interact with  </span>  <strong> the web,  </strong>  <span style="font-weight: 400;"> so it&rsquo;s good for students to know about them. Since they&rsquo;re ubiquitous, they can also be used  </span>  <strong> as a demo </strong>  <span style="font-weight: 400;"> , and to introduce the idea of  </span>  <strong> serving everyone </strong>  <span style="font-weight: 400;"> . </span>  </li> 
+ </ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> LO_STRUCT_WORD: Specify and expose as much structural metadata as possible in word documents </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Specify and expose as much structural metadata as possible in word documents </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Use a document editor&rsquo;s styles in order to organize sections and subsections </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Use a document editor&rsquo;s lists (ordered or unordered) instead of making your own equivalent </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Set alt text for your images (this provides a textual description for anyone who can&rsquo;t see them--more on how to do good ones later) </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> &hellip; </span>  </li> 
+ </ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Word, Google Docs, and other similar software provide a common way to share information. There are a few simple but key tricks to expose document structure to screen readers, some of which also provide benefits beyond accessibility concerns.  </span>  </li> 
+ </ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> LO_STRUCT_HTML: &nbsp;Specify and expose as much structural metadata as possible in HTML documents </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Specify and expose as much structural metadata as possible in HTML documents </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Use heading tags to structure sections and subsections </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Use list tags (ordered or unordered) instead of making your own equivalent </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Use table heading tags to provide information about the structure of information in a table </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> &lt;table&gt; comes with tr/td/th </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Fancier things possible if a header spans multiple rows or cols:  </span>  <a href="https://www.washington.edu/accesscomputing/tip-8-markup-tables-appropriately">  <span style="font-weight: 400;"> https://www.washington.edu/accesscomputing/tip-8-markup-tables-appropriately </span>  </a>  </li> 
+ </ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> In general, use the most specific HTML tag to your situation (e.g. use &lt;button&gt; instead of a &lt;div&gt; styled to act like a button) </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> This also adds a button to a tab order for keyboard navigation purposes, so it&rsquo;s not just for people with screen readers </span>  </li> 
+ </ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> If that&rsquo;s not possible, set the &ldquo;role&rdquo; attribute of a tag </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Even if there isn&rsquo;t a specific HTML tag, there may be a role attribute that fits anyway (e.g. role="search" for a search widget) </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Roles are part of WAI-ARIA (Web Accessibility Initiative, Accessible Rich Internet Applications) (link to accessibility standards/ARIA) </span>  </li> 
+ </ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> HTML is one of the best ways to provide accessible documents when used correctly, since the tags it uses to mark up the information it represents can also be used to understand a pages structure. This page provides some examples, beyond more readable and easier-to-understand code, to use core features of the language rather than reinventing the wheel.  </span>  </li> 
+ </ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> LO_PDF: Pdfs are difficult to make accessible and other formats should be used where possible </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> PDFs are difficult to make accessible and other formats should be used where possible </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> The original intention of the pdf format was to preserve a fixed visual representation </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> As such, PDFs often discard structural information (headings, text order, etc) or even the fact that text is text </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> In order to link the structure of the pdf as metadata that a screen reader can perceive, a pdf must be  </span>  <em>  <span style="font-weight: 400;"> tagged  </span>  </em>  <span style="font-weight: 400;"> (tag is used here in the sense it has in HTML, where tags can automatically provide metadata about their content) </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> MS Word can export a tagged PDF on Windows, although often post-processing is required to correct errors such as text order around images </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> The professional version of Adobe Reader can be used to manually check for and adjust tags </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> A more specific pipeline can be found here if you ever need to do this process:  </span>  <strong> (link) </strong>  </li> 
+ </ul> 
+ </ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> PDFs are a common way to share information since they preserve a fixed visual representation and can be opened on any operating system. However, students should understand their drawbacks when it comes to accessibility, and how to make them accessible if they are constrained to use them.  </span>  </li> 
+ </ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> LO_GP: The HTML standard includes ways to group input fields with labels so that they&rsquo;re associated together (decide level of detail--grouping information, with label as example (make sure meaningful/unique)) </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;">  The HTML standard includes ways to group input fields with labels so that they&rsquo;re associated together </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Why? In forms, this exposes information usually encoded in the visual layout (e.g. by always having a label for an input field directly above it) to someone who can&rsquo;t see the screen.  </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;">  To do this: </span>  </li> 
+ <ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Enclose the input field in a &lt;label&gt; tag </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Use aria-labelledby and for attributes (?) </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Also add an extra aria-label when format is so visually obvious, e.g. three fields for telephone number, that it doesn&rsquo;t need a label visible to everyone </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> aria-described-by (when a label is insufficient, so a field is also associated with e.g. extra help text) </span>  </li> 
+ </ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> Do make sure labels are meaningful and unique, but they shouldn&rsquo;t be too verbose </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> In general, grouping is also helpful if it makes sure a caption gets associated with the image its for </span>  </li> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> [Provide checkbox/radio buttons example] </span>  </li> 
+ </ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> This exposes students to a different way in which HTML markup can be used for non-obvious but useful tasks. Grouping in this way is an important concept because it forces students to reconsider the assumption that visual organization is all the organization that is needed. </span>  </li> 
+ </ul> 
+ <li style="font-weight: 400;">  <span style="font-weight: 400;"> This topic is also related to topics &ldquo;Presentation of Information&rdquo; (more on exposing visual information to screen readers and people with different abilities), &ldquo;Accessible multimedia&rdquo; (about exposing video or audio to people with different kinds of abilities), and &ldquo;Accessibility Standards&rdquo; (more on WAI-ARIA) </span>  </li> 
+ </ul> 
