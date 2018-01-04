@@ -23,6 +23,10 @@ public class StringTree {
 		return children.isEmpty();
 	}
 
+	public String toJsonString() {
+		return toString(children);
+	}
+
 	public static String toString(List<StringTree> list) {
 		String str = "";
 		/*
@@ -44,8 +48,8 @@ public class StringTree {
 
 		for (int i = 0; i < list.size(); i++) {
 			// process lo:
-			String lo = list.get(i).value.split(":")[0];
-			str += "\"" + lo + "\": {\n\"id\": \"" + lo + "\"";
+			String lo = list.get(i).value.split(":")[0].toLowerCase();
+			str += ",\n\"" + lo + "\": {\n\"id\": \"" + lo + "\"";
 			if (i == list.size() - 1) {
 				str += "}";
 				continue;
@@ -62,7 +66,7 @@ public class StringTree {
 				str += ",\n\"name\": \"" + title + "\"";
 				StringTree cont = content.children.get(1);
 
-				str += ",\n\"material\": \"" + cont.toJsonList() + "\"";
+				str += ",\n\"material\": " + cont.toJsonList();
 				String arg = content.children.get(2).value;
 				str += ",\n\"arg\": \"" + arg + "\"";
 			} catch (IndexOutOfBoundsException e) {
@@ -83,7 +87,7 @@ public class StringTree {
 				str += "," + child.toJsonList();
 			}
 		}
-		return str.substring(1);
+		return "[" + str.substring(1) + "]";
 	}
 
 	public static List<StringTree> readPage(String htmlFileName) {
@@ -163,6 +167,9 @@ public class StringTree {
 					// clean up value
 					if (children.isEmpty()) {
 						value = value.trim();
+						value = value.replaceAll("&lt;", "<");
+						value = value.replaceAll("&gt;", ">");
+						value = value.replaceAll("\"", "\\\"");
 					} else {
 						value = "";
 					}
@@ -199,8 +206,12 @@ public class StringTree {
 		String filename = "blah3.txt";
 		List<StringTree> list = StringTree.readPage(filename);
 		// StringTree st = new StringTree(filename);
-		System.out.println(list);
-
-		System.out.println(StringTree.toString(list));
+//		System.out.println(list);
+//
+//		System.out.println("\n\nHi\n\n");
+//		System.out.println(StringTree.toString(list));
+//
+//		System.out.println("\n\nHi\n\n");
+		System.out.println(list.get(0).toJsonString());
 	}
 }

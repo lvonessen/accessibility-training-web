@@ -12,5 +12,84 @@
 		"arg": "This is important to web development because... (LO argument)",
 		"material": [ "point 1", "point 2", ["subpoint1", "subpoint2"], "point 3" ],
 		"options": [ "brief", "indepth", "activity" ]
-	}
+	},
+  "lo_sr": {
+    "id": "lo_sr",
+    "name": "Screen readers read structured \"documents\" as speech",
+    "material": [
+      "\"Documents\" includes things we think of as documents (mostly text, maybe some headings and images) but also more complicated things like web pages or user interfaces",
+      "Screen readers expose structure (headings, lists, menus, etc) in different ways which often enable easier navigation to desired content",
+      "Expert screen reader users form their own ways of using them (e.g. at high playback speeds) that are not necessarily comparable to novice screen reader users",
+      [
+        "(testing something yourself is different from having an expert screen reader user do it)",
+        "(video demo for them or students?)"
+      ]
+    ],
+    "arg": "Screen readers are a common way that blind or low-vision people interact with the web, so it's good for students to know about them. Since they're ubiquitous, they can also be used as a demo , and to introduce the idea of serving everyone ."
+  },
+  "lo_struct_word": {
+    "id": "lo_struct_word",
+    "name": "Specify and expose as much structural metadata as possible in word documents",
+    "material": [
+      "Use a document editor's styles in order to organize sections and subsections",
+      "Use a document editor's lists (ordered or unordered) instead of making your own equivalent",
+      "Set alt text for your images (this provides a textual description for anyone who can't see them--more on how to do good ones later)",
+      "..."
+    ],
+    "arg": "Word, Google Docs, and other similar software provide a common way to share information. There are a few simple but key tricks to expose document structure to screen readers, some of which also provide benefits beyond accessibility concerns."
+  },
+  "lo_struct_html": {
+    "id": "lo_struct_html",
+    "name": "Specify and expose as much structural metadata as possible in HTML documents",
+    "material": [
+      "Use heading tags to structure sections and subsections",
+      "Use list tags (ordered or unordered) instead of making your own equivalent",
+      "Use table heading tags to provide information about the structure of information in a table",
+      [
+        "<table> comes with tr/td/th",
+        "Fancier things possible if a header spans multiple rows or cols: https://www.washington.edu/accesscomputing/tip-8-markup-tables-appropriately"
+      ],
+      "In general, use the most specific HTML tag to your situation (e.g. use <button> instead of a <div> styled to act like a button)",
+      [
+        "This also adds a button to a tab order for keyboard navigation purposes, so it's not just for people with screen readers"
+      ],
+      "If that's not possible, set the \"role\" attribute of a tag",
+      "Even if there isn't a specific HTML tag, there may be a role attribute that fits anyway (e.g. role=\"search\" for a search widget)",
+      "Roles are part of WAI-ARIA (Web Accessibility Initiative, Accessible Rich Internet Applications) (link to accessibility standards/ARIA)"
+    ],
+    "arg": "HTML is one of the best ways to provide accessible documents when used correctly, since the tags it uses to mark up the information it represents can also be used to understand a pages structure. This page provides some examples, beyond more readable and easier-to-understand code, to use core features of the language rather than reinventing the wheel."
+  },
+  "lo_pdf": {
+    "id": "lo_pdf",
+    "name": "PDFs are difficult to make accessible and other formats should be used where possible",
+    "material": [
+      "The original intention of the pdf format was to preserve a fixed visual representation",
+      "As such, PDFs often discard structural information (headings, text order, etc) or even the fact that text is text",
+      "In order to link the structure of the pdf as metadata that a screen reader can perceive, a pdf must be tagged (tag is used here in the sense it has in HTML, where tags can automatically provide metadata about their content)",
+      [
+        "MS Word can export a tagged PDF on Windows, although often post-processing is required to correct errors such as text order around images",
+        "The professional version of Adobe Reader can be used to manually check for and adjust tags",
+        "A more specific pipeline can be found here if you ever need to do this process: (link)"
+      ]
+    ],
+    "arg": "PDFs are a common way to share information since they preserve a fixed visual representation and can be opened on any operating system. However, students should understand their drawbacks when it comes to accessibility, and how to make them accessible if they are constrained to use them."
+  },
+  "lo_gp": {
+    "id": "lo_gp",
+    "name": "The HTML standard includes ways to group input fields with labels so that they're associated together",
+    "material": [
+      "Why? In forms, this exposes information usually encoded in the visual layout (e.g. by always having a label for an input field directly above it) to someone who can't see the screen.",
+      "To do this:",
+      [
+        "Enclose the input field in a <label> tag",
+        "Use aria-labelledby and for attributes (?)",
+        "Also add an extra aria-label when format is so visually obvious, e.g. three fields for telephone number, that it doesn't need a label visible to everyone",
+        "aria-described-by (when a label is insufficient, so a field is also associated with e.g. extra help text)"
+      ],
+      "Do make sure labels are meaningful and unique, but they shouldn't be too verbose",
+      "In general, grouping is also helpful if it makes sure a caption gets associated with the image its for",
+      "[Provide checkbox/radio buttons example]"
+    ],
+    "arg": "This exposes students to a different way in which HTML markup can be used for non-obvious but useful tasks. Grouping in this way is an important concept because it forces students to reconsider the assumption that visual organization is all the organization that is needed."
+  }
 }
