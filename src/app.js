@@ -50,6 +50,7 @@ class App extends React.Component {
 		
 		var currentRoute = this.props.location.pathname;
 		
+		// HERE is where courses get information passed to them
 		var courseRoutes = [];
 		for (var i=0; i<courses.length; i++){
 			courseRoutes.push(<Route key={courses[i].id} path={"/"+courses[i].id} render={() => (<Course {...courses[i]}/>)}
@@ -72,8 +73,8 @@ class App extends React.Component {
 					<Route path="/students/:student?" component={Students}/>
 					<Route path="/cv" component={Vita}/>
 					<Route path="/cer" component={CER}/>
-					{/* has to be at the end because it will match anything */}
-					<Route path="/:course?" component={Course}/>
+					{/* has to be at the end because it will match anything 
+					<Route path="/:course?" component={Course}/> */}
 					
 					{/* would have to be at the end because it will 
 						 match anything, but course does instead */}
