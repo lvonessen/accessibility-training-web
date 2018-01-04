@@ -64,9 +64,15 @@ class App extends React.Component {
 					<Route exact path="/" component={Intro}/>
 					{/* the course picking page will need to get passed in the course change function */}
 					<Route path="/proj" component={Projects}/>
+					
+					<Route path="/coursechoice" component={Unknown}/>
+					
+					{/*
 					<Route path={"/coursechoice"}
 					render={() => (<CourseChoice update={this.handleCourseChange}/>)}
 					/>
+					*/}
+					
 					{courseRoutes}
 					<Route path="/publications/:paper?" component={Publications}/>
 					<Route path="/slides" component={Unknown}/>
