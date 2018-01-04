@@ -6,6 +6,11 @@
 		"descrip": "Something about common topics in web development courses.",
 		"topics": [
 			{
+				"id": "exp_struct",
+				"arg": "We use structure to organize text all the time in our daily lives--books are organized into chapters, papers into sections, slides into bulleted lists, italics to place emphasis on certain words, etc. Frequently, this is conveyed visually through for example headers with larger font or circles before list elements. However, this structure is especially important when people can’t see the page, because the two dimensional page that eyes can easily skim otherwise becomes a linear stream of words read aloud by a screen reader (software commonly used by people who are blind or have dyslexia). However, there are ways to expose this structure to screen readers, allowing more targeted navigation of content.",
+				"flavor": "full"
+			},
+			{
 				"id": "intro",
 				"arg": "It's important to define accessibility to your students because they may not have seen it before and knowing about it is becoming a requirement in modern web development. Etc etc (argument for topic i.e. group of LOs)",
 				"flavor": "default"

@@ -14,5 +14,12 @@
 				"default": [ "lo_what", "lo_kinds" ],
 				"full": [ "lo_what", "lo_kinds", "lo_div", "lo_who", "lo_num", "lo_models", "lo_tech_models" ]
 		}
+	},
+	"exp_struct": {
+		"id": "exp_struct",
+		"name": Exposing Structure,
+		"flavormap": {
+			"full": ["lo_sr","lo_struct_word","lo_struct_html", "lo_pdf","lo_gp"]
+		}	
 	}
 }
