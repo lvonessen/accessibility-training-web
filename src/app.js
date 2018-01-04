@@ -39,7 +39,7 @@ class App extends React.Component {
 		super(props);
 		this.handleCourseChange = this.handleCourseChange.bind(this);
 		// eventually courses will start out empty
-		this.state = {courses: []};
+		this.state = {courses: ["0"]};
 	}
 	
 	handleCourseChange(newCourses) {
@@ -55,6 +55,7 @@ class App extends React.Component {
 		for (var i=0; i<courses.length; i++){
 			courseRoutes.push(<Route key={courses[i].id} path={"/"+courses[i].id} render={() => (<Course {...courses[i]}/>)}
 					/>);
+			console.log (courses[i]);
 		}
 		
 		return (

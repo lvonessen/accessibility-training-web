@@ -12,8 +12,9 @@ class Header extends React.Component {
 		
 		var rows = [];
 		for (var i=0; i<this.props.courses.length; i++){
-			var courseid = this.props.courses[i];
-			rows.push( <li key={courseid} role="presentation" className={path.startsWith("/"+courseid) ? "active" : ""}><Link to={"/"+courseid}>{courses[courseid].name}</Link></li> );
+			var courseindex = this.props.courses[i];
+			var courseid = courses[courseindex].id;
+			rows.push( <li key={courseid} role="presentation" className={path.startsWith("/"+courseid) ? "active" : ""}><Link to={"/"+courseid}>{courses[courseindex].name}</Link></li> );
 		}
 		
 		return (
