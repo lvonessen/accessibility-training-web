@@ -2,22 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
-import { Biography } from './bio';
-import { Publications } from './publications';
-import { Impact } from './impact';
 import { CourseChoice } from './coursechoice';
-import { Students } from './students';
 import { Header } from './header';
-import { Projects } from './projects';
 import { Topic } from './topic';
 import { Course } from './course';
 import { Intro } from './intro';
-import { Reading } from './reading';
-import { Advice } from './advice';
-import { Teaching } from './teaching';
-import { Books } from './books';
-import { Vita } from './cv';
-import { CER } from './cer';
 import { Unknown } from './unknown';
 
 import 'bootstrap';
@@ -37,8 +26,12 @@ class App extends React.Component {
 	
 	constructor(props) {
 		super(props);
+		
+		// course change uses this to change state (which the header pays attention to)
 		this.handleCourseChange = this.handleCourseChange.bind(this);
+		
 		// eventually courses will start out empty
+		// list of relevant course *INDICES*
 		this.state = {courses: ["0"]};
 	}
 	
@@ -60,28 +53,22 @@ class App extends React.Component {
 		
 		return (
 			<div className="container">
-				{currentRoute === "/cv" ? null : <Header path={currentRoute} courses={this.state.courses}/>}
+				<Header path={currentRoute} courses={this.state.courses}/>
 				<Switch>
 					<Route exact path="/" component={Intro}/>
-					{/* the course picking page will need to get passed in the course change function */}
-					<Route path="/proj" component={Projects}/>
-					
+						
 					<Route path="/coursechoice" component={Unknown}/>
-					
+					{/* the course picking page will need to get passed in the course change function */}				
 					{/*
 					<Route path={"/coursechoice"}
 					render={() => (<CourseChoice update={this.handleCourseChange}/>)}
 					/>
 					*/}
 					
+					{/* shorthand for the individual course pages */}				
 					{courseRoutes}
-					<Route path="/publications/:paper?" component={Publications}/>
+					
 					<Route path="/slides" component={Unknown}/>
-					<Route path="/students/:student?" component={Students}/>
-					<Route path="/cv" component={Vita}/>
-					<Route path="/cer" component={CER}/>
-					{/* has to be at the end because it will match anything 
-					<Route path="/:course?" component={Course}/> */}
 					
 					{/* would have to be at the end because it will 
 						 match anything, but course does instead */}

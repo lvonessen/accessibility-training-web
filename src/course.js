@@ -11,11 +11,12 @@ import 'bootstrap';
 class Course extends React.Component {
 	render() {
 		
-		var currentRoute = this.props.location.pathname;
-				
 		// copied from the students thing
+		var currentRoute = this.props.location.pathname;
+		
 		var courseid = this.props.id;
-				
+		
+		// from course json, not from topics json
 		var topics = this.props.topics;
 		
 		var rows = [];
@@ -35,7 +36,7 @@ class Course extends React.Component {
 		
 		return (
 			<div className="container">
-				{<CourseHeader path={currentRoute} course={courses[courseid]}/>}	
+				<CourseHeader path={currentRoute} courseid={courseid} coursetopics={topics}/>
 					
 				{/* potentially have an intro page before the different topics?
 					 then again "intro" is a pretty good lead-in regardless. */}

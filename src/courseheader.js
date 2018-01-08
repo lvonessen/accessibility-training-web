@@ -10,13 +10,14 @@ class CourseHeader extends React.Component {
 		
 		var path = this.props.path || "";
 		
-		var course = this.props.course;
+		var courseid = this.props.courseid;
+		var coursetopics = this.props.coursetopics;
 		
 		var rows = [];
-		rows.push(<li key={course.topics[0].id} role="presentation" className={(path === ("/"+course.id)) ? "active" : ""}><Link to={"/"+course.id}>{topics[course.topics[0].id].name}</Link></li>);
-		for (var i=1; i < course.topics.length; i++){
-			var topicid = course.topics[i].id;
-			var pathHeader = "/"+course.id+"/"+topicid;
+		rows.push(<li key={coursetopics[0].id} role="presentation" className={(path === ("/"+courseid)) ? "active" : ""}><Link to={"/"+courseid}>{topics[coursetopics[0].id].name}</Link></li>);
+		for (var i=1; i < coursetopics.length; i++){
+			var topicid = coursetopics[i].id;
+			var pathHeader = "/"+courseid+"/"+topicid;
 			rows.push(<li key={topicid} role="presentation" className={(path.startsWith(pathHeader)) ? "active" : ""}><Link to={pathHeader}>{topics[topicid].name}</Link></li>);
 		}
 		

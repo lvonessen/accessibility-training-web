@@ -21,6 +21,7 @@ class Topic extends React.Component {
 	render() {
 		
 		var courseid = this.props.courseid;
+		// json
 		var topic = topics[this.props.id];
 		var arg = this.props.arg;
 		var flavor = this.props.flavor;
@@ -32,7 +33,7 @@ class Topic extends React.Component {
 		//console.log(subtopicset);
 
 		// Create a list of subtopics
-		var rows = [];
+		var subtopiclist = [];
 		//console.log(subtopicset.length);
 		for (var i = 0; i < subtopicset.length; i++) {
 			
@@ -41,13 +42,13 @@ class Topic extends React.Component {
 			var subtopic = subtopics[subtopicid];
 			//console.log(subtopic);
 			
-			rows.push(<LOTile {...subtopic} id={subtopicid} key={subtopicid} />);
+			subtopiclist.push(<LOTile {...subtopic} id={subtopicid} key={subtopicid} />);
 		}
 		return (
 			<div>
 				<h2 name={topic.id}>{topic.name}</h2>
 				<p> {arg} </p>
-				<div>{rows}</div>
+				<div>{subtopiclist}</div>
 			</div>
 		);
 			
