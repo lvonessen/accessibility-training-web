@@ -11,20 +11,21 @@ import 'bootstrap';
 class Course extends React.Component {
 	render() {
 		
-		// copied from the students thing
-		var currentRoute = this.props.location.pathname;
+		var currentRoute = this.props.currentRoute;
 		
 		var courseid = this.props.id;
 		
 		// from course json, not from topics json
 		var topics = this.props.topics;
 		
+		console.log (topics);
+		
 		var rows = [];
 		const topic0 = topics[0];
 		rows.push( <Route exact path={"/"+courseid} key=""
 				render={() => (<Topic {...topic0} courseid={courseid}/>)}
 				/> );
-		for (var i = 0; i<topics.length; i++){
+		for (var i = 1; i<topics.length; i++){
 			const topic = topics[i];
 			
 			/* https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf 

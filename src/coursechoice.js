@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
-import { CourseHeader } from './courseheader';
 import { Topic } from './topic';
 import { Unknown } from './unknown';
+import { CourseOption } from './courseoption';
 
 import 'bootstrap';
 
@@ -15,46 +15,44 @@ class CourseChoice extends React.Component {
 	constructor(props) {
 		super(props);
 		this.clickCourse = this.clickCourse.bind(this);
-		// eventually courses will start out empty
-		this.state = {courseindices: [], courses: []};
+		this.state = {courseindices: []};
 	}
 	
 	clickCourse(courseIndex) {
+		console.log("clicked on course i "+courseIndex);
 		var index = this.state.courseindices.indexOf(courseIndex);
 		
 		if (index > -1) {
+			// remove 1 at index index
 			this.state.courseindices.splice(index, 1);
-			this.state.courses.splice(index, 1);
 		} else {
 			this.state.courseindices.push(courseIndex);
-			this.state.courses.push(courses[courseIndex]);
 		}
 		
-		this.props.update(this.state.courses);
+		this.props.update(this.state.courseindices);
+	}
+	
+	// gets called once at beginning
+	componentWillMount() {
+		// eventually courses will start out empty
+		//this.clickCourse(0);
+		//this.clickCourse(1);
 	}
 	
 	render() {
 		
-		this.props.update([courses[0],courses[1]]);
+		console.log("Hi hello the hell?");
 		
-		var currentRoute = this.props.location.pathname;
-				
-		// copied from the students thing
-		var courseid = this.props.match.params.course;
-				
-		var topics = courses[courseid].topics;
-		
-		var rows = [];
-		for (var i = 0; i<topics.length; i++){
-			const course = courses[i];			
-			rows.push(<li key={course.id} index={i} role="presentation" onclick={this.clickCourse(i)}><Link to={pathHeader}>{topics[topicid].name}</Link></li>);
+		var courseoptions = [];
+		for (var i = 0; i<courses.length; i++){
+			var course = courses[i];
+			courseoptions.push(<li key={course.id} role="presentation" className={this.state.courseindices.indexOf(i) > -1 ? "active" : ""}><CourseOption course={i} name={course.name} update={this.clickCourse}></CourseOption></li>);
 		}
 		
 		return (
 			<div className="container">
-				{<CourseHeader path={currentRoute} course={courses[courseid]}/>}	
 				<ul>
-				{rows}
+				{courseoptions}
 				</ul>
 				
 			</div>

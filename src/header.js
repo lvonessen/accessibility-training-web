@@ -7,9 +7,11 @@ class Header extends React.Component {
 	render() {
 		
 		var path = this.props.path || "";
-		// list of courses selected by professor
+		// list of courses selected by user
 		// passed in from app.js
 		var courselist = this.props.courses;
+		console.log("I'm in Header and supposedly got passed in a list of courses but this may be a lie");
+		console.log(courselist);
 		
 		var courselinks = [];
 		for (var i=0; i<courselist.length; i++){
@@ -28,7 +30,7 @@ class Header extends React.Component {
 						<ul className="nav nav-pills">
 						
 							<li key="intro" role="presentation" className={path === "/" ? "active" : ""}><Link to="/">Introduction</Link></li>
-							<li key="coursechoice" role="presentation" className={path.startsWith("/publications") ? "active" : ""}><Link to="/coursechoice">Choose your courses</Link></li>
+							<li key="coursechoice" role="presentation" className={path.startsWith("/coursechoice") ? "active" : ""}><Link to="/coursechoice">Choose your courses</Link></li>
 							
 							{/* Where you click to get taken to information relevant to that course */}
 							{courselinks}

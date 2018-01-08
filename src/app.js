@@ -46,9 +46,10 @@ class App extends React.Component {
 		// HERE is where courses get information passed to them
 		var courseRoutes = [];
 		for (var i=0; i<courses.length; i++){
-			courseRoutes.push(<Route key={courses[i].id} path={"/"+courses[i].id} render={() => (<Course {...courses[i]}/>)}
+			var coursei = courses[i];
+			courseRoutes.push(<Route key={coursei.id} path={"/"+coursei.id} render={() => (<Course {...coursei} currentRoute={currentRoute}/>)}
 					/>);
-			console.log (courses[i]);
+			console.log (coursei);
 		}
 		
 		return (
@@ -57,12 +58,13 @@ class App extends React.Component {
 				<Switch>
 					<Route exact path="/" component={Intro}/>
 						
-					<Route path="/coursechoice" component={Unknown}/>
-					{/* the course picking page will need to get passed in the course change function */}				
-					{/*
+					{/*<Route path="/coursechoice" component={Unknown}/>
+					 the course picking page will need to get passed in the course change function */}				
+					
 					<Route path={"/coursechoice"}
 					render={() => (<CourseChoice update={this.handleCourseChange}/>)}
 					/>
+					{/* hi
 					*/}
 					
 					{/* shorthand for the individual course pages */}				
