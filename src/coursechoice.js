@@ -15,11 +15,15 @@ class CourseChoice extends React.Component {
 	constructor(props) {
 		super(props);
 		this.clickCourse = this.clickCourse.bind(this);
+		this.isSelected = this.isSelected.bind(this);
 		this.state = {courseindices: []};
 	}
 	
+	isSelected(courseIndex){
+		return this.state.courseindices.indexOf(courseIndex) > -1;
+	}
+	
 	clickCourse(courseIndex) {
-		console.log("clicked on course i "+courseIndex);
 		var index = this.state.courseindices.indexOf(courseIndex);
 		
 		if (index > -1) {
@@ -32,21 +36,12 @@ class CourseChoice extends React.Component {
 		this.props.update(this.state.courseindices);
 	}
 	
-	// gets called once at beginning
-	componentWillMount() {
-		// eventually courses will start out empty
-		//this.clickCourse(0);
-		//this.clickCourse(1);
-	}
-	
 	render() {
-		
-		console.log("Hi hello the hell?");
 		
 		var courseoptions = [];
 		for (var i = 0; i<courses.length; i++){
 			var course = courses[i];
-			courseoptions.push(<li key={course.id} role="presentation" className={this.state.courseindices.indexOf(i) > -1 ? "active" : ""}><CourseOption course={i} name={course.name} update={this.clickCourse}></CourseOption></li>);
+			courseoptions.push(<li key={course.id} role="presentation"><CourseOption course={i} name={course.name} update={this.clickCourse} selected={this.isSelected}></CourseOption></li>);
 		}
 		
 		return (

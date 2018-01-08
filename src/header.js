@@ -10,8 +10,6 @@ class Header extends React.Component {
 		// list of courses selected by user
 		// passed in from app.js
 		var courselist = this.props.courses;
-		console.log("I'm in Header and supposedly got passed in a list of courses but this may be a lie");
-		console.log(courselist);
 		
 		var courselinks = [];
 		for (var i=0; i<courselist.length; i++){

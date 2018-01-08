@@ -49,7 +49,6 @@ class App extends React.Component {
 			var coursei = courses[i];
 			courseRoutes.push(<Route key={coursei.id} path={"/"+coursei.id} render={() => (<Course {...coursei} currentRoute={currentRoute}/>)}
 					/>);
-			console.log (coursei);
 		}
 		
 		return (
