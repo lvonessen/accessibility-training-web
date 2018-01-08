@@ -14,26 +14,6 @@ class CourseChoice extends React.Component {
 	
 	constructor(props) {
 		super(props);
-		this.clickCourse = this.clickCourse.bind(this);
-		this.isSelected = this.isSelected.bind(this);
-		this.state = {courseindices: []};
-	}
-	
-	isSelected(courseIndex){
-		return this.state.courseindices.indexOf(courseIndex) > -1;
-	}
-	
-	clickCourse(courseIndex) {
-		var index = this.state.courseindices.indexOf(courseIndex);
-		
-		if (index > -1) {
-			// remove 1 at index index
-			this.state.courseindices.splice(index, 1);
-		} else {
-			this.state.courseindices.push(courseIndex);
-		}
-		
-		this.props.update(this.state.courseindices);
 	}
 	
 	render() {
@@ -41,7 +21,8 @@ class CourseChoice extends React.Component {
 		var courseoptions = [];
 		for (var i = 0; i<courses.length; i++){
 			var course = courses[i];
-			courseoptions.push(<li key={course.id} role="presentation"><CourseOption course={i} name={course.name} update={this.clickCourse} selected={this.isSelected}></CourseOption></li>);
+			// pass course *INDEX* into update to toggle selection
+			courseoptions.push(<li key={course.id} role="presentation"><CourseOption course={i} name={course.name} update={this.props.update} selected={this.props.isSelected}></CourseOption></li>);
 		}
 		
 		return (

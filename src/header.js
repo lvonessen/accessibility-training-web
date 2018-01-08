@@ -12,8 +12,8 @@ class Header extends React.Component {
 		var courselist = this.props.courses;
 		
 		var courselinks = [];
-		for (var i=0; i<courselist.length; i++){
-			var courseindex = courselist[i];
+		for (var i=0; i<this.props.courses.length; i++){
+			var courseindex = this.props.courses[i];
 			var courseid = courses[courseindex].id;
 			var coursename = courses[courseindex].name;
 			courselinks.push( <li key={courseid} role="presentation" className={path.startsWith("/"+courseid) ? "active" : ""}><Link to={"/"+courseid}>{coursename}</Link></li> );

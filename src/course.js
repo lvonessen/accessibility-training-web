@@ -21,11 +21,7 @@ class Course extends React.Component {
 		console.log (topics);
 		
 		var rows = [];
-		const topic0 = topics[0];
-		rows.push( <Route exact path={"/"+courseid} key=""
-				render={() => (<Topic {...topic0} courseid={courseid}/>)}
-				/> );
-		for (var i = 1; i<topics.length; i++){
+		for (var i = 0; i<topics.length; i++){
 			const topic = topics[i];
 			
 			/* https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf 

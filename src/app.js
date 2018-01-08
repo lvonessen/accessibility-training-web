@@ -28,16 +28,40 @@ class App extends React.Component {
 		super(props);
 		
 		// course change uses this to change state (which the header pays attention to)
-		this.handleCourseChange = this.handleCourseChange.bind(this);
+		this.isSelected = this.isSelected.bind(this);
+		this.clickCourse = this.clickCourse.bind(this);
 		
 		// eventually courses will start out empty
 		// list of relevant course *INDICES*
-		this.state = {courses: ["0"]};
+		this.state = {	
+      	courses: [0]
+		};
 	}
 	
-	handleCourseChange(newCourses) {
-		this.setState({courses: newCourses});
-	}	
+	isSelected(courseIndex){
+		return this.state.courses.indexOf(courseIndex) > -1;
+	}
+	
+	clickCourse(courseIndex) {
+		var state = this.state;		
+		
+		console.log("Fuck this IS getting called??? With "+courseIndex);	
+		console.log(state.courses);	
+		
+		var index = state.courses.indexOf(courseIndex);
+		
+		if (index > -1) {
+			// remove 1 at index index
+			state.courses.splice(index, 1);
+		} else {
+			state.courses.push(courseIndex);
+		}
+		
+		this.state = state;
+		
+		console.log("And after:");
+		console.log(this.state.courses);
+	}
 	
 	render() {
 		
@@ -61,7 +85,7 @@ class App extends React.Component {
 					 the course picking page will need to get passed in the course change function */}				
 					
 					<Route path={"/coursechoice"}
-					render={() => (<CourseChoice update={this.handleCourseChange}/>)}
+					render={() => (<CourseChoice update={this.clickCourse} isSelected={this.isSelected} state={this.state.courses}/>)}
 					/>
 					{/* hi
 					*/}
