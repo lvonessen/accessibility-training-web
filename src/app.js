@@ -45,9 +45,6 @@ class App extends React.Component {
 	clickCourse(courseIndex) {
 		var state = this.state;		
 		
-		console.log("Fuck this IS getting called??? With "+courseIndex);	
-		console.log(state.courses);	
-		
 		var index = state.courses.indexOf(courseIndex);
 		
 		if (index > -1) {
@@ -57,10 +54,9 @@ class App extends React.Component {
 			state.courses.push(courseIndex);
 		}
 		
-		this.state = state;
+		// have to change state like this otherwise everything breaks!!!
+		this.setState({courses: state.courses});
 		
-		console.log("And after:");
-		console.log(this.state.courses);
 	}
 	
 	render() {
