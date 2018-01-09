@@ -17,12 +17,14 @@ class Course extends React.Component {
 		
 		// from course json, not from topics json
 		var topics = this.props.topics;
-		
-		console.log (topics);
-		
+				
 		var rows = [];
+		var topic = topics[0];
+		rows.push( <Route key={topic.id} path={"/"+courseid}
+					render={() => (<Topic {...topic} courseid={courseid}/>)}
+					/> );
 		for (var i = 0; i<topics.length; i++){
-			const topic = topics[i];
+			topic = topics[i];
 			
 			/* https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf 
 				tells how to pass extra props to the component */
