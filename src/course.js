@@ -11,14 +11,24 @@ import 'bootstrap';
 class Course extends React.Component {
 	render() {
 
+		// from :paper match in original thingy
+		var courseName = this.props.match.params.course;
+
+		var courseData = this.props.lookUp(courseName);
+
+		if (courseData == undefined){
+			console.log ("Oh nos! That course doesn't exist")
+			// TODO: show the sad panda thing
+		}
+
 		var currentRoute = this.props.currentRoute;
 		console.log(currentRoute)
 
-		var courseid = this.props.id;
+		var courseid = course.id;
 		console.log(courseid)
 
 		// from course json, not from topics json
-		var topics = this.props.topics;
+		var topics = course.topics;
 
 		var rows = [];
 		var topic;

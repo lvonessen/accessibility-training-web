@@ -31,12 +31,29 @@ class App extends React.Component {
 		this.isSelected = this.isSelected.bind(this);
 		this.clickCourse = this.clickCourse.bind(this);
 
+		this.lookUp = this.lookUp.bind(this);
+
+    var lookupTable = new Object();
+    for (var i=0; i<courses.length; i++){
+			lookupTable[courses[i].id] = i;
+		}
+
 		// eventually courses will start out empty
 		// list of relevant course *INDICES*
 		this.state = {
-      	courses: [0]
+      	courses: [0],
+        lookupTable: lookupTable
 		};
 	}
+
+  lookUp(courseID){
+    var ind = this.states.lookupTable[courseID];
+    if (ind != undefined){
+      console.log("Course exists!: "+ind)
+      return courses[ind];
+    }
+    return ind;
+  }
 
 	isSelected(courseIndex){
 		return this.state.courses.indexOf(courseIndex) > -1;
@@ -55,7 +72,7 @@ class App extends React.Component {
 		}
 
 		// have to change state like this otherwise everything breaks!!!
-		this.setState({courses: state.courses});
+		this.setState({courses: state.courses, lookupTable: this.state.lookupTable});
 
 	}
 
@@ -88,10 +105,12 @@ class App extends React.Component {
 					{/* hi
 					*/}
 
-					{/* shorthand for the individual course pages */}
-					{courseRoutes}
+          <Route path="/slides" component={Unknown}/>
 
-					<Route path="/slides" component={Unknown}/>
+					{/* shorthand for the individual course pages*/ /* {courseRoutes} */}
+          <Route path={"/:course"}
+					render={() => (<Course lookUp={this.lookUp} currentRoute={currentRoute}/>)}
+					/>
 
 					{/* would have to be at the end because it will
 						 match anything, but course does instead */}
