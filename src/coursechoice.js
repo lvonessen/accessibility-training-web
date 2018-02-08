@@ -8,29 +8,29 @@ import { CourseOption } from './courseoption';
 
 import 'bootstrap';
 
-var courses = require('./courses');
+var courses = require('./json/courses');
 
 class CourseChoice extends React.Component {
-	
+
 	constructor(props) {
 		super(props);
 	}
-	
+
 	render() {
-		
+
 		var courseoptions = [];
 		for (var i = 0; i<courses.length; i++){
 			var course = courses[i];
 			// pass course *INDEX* into update to toggle selection
 			courseoptions.push(<li key={course.id} role="presentation"><CourseOption course={i} name={course.name} update={this.props.update} selected={this.props.isSelected}></CourseOption></li>);
 		}
-		
+
 		return (
 			<div className="container">
 				<ul>
 				{courseoptions}
 				</ul>
-				
+
 			</div>
 		)
 	}
