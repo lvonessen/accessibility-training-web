@@ -22,8 +22,6 @@ class CourseHeader extends React.Component {
 
 	render() {
 
-		//console.log("all hail the great course header.");
-
 		var path = this.props.path || "";
 
 		var courseid = this.props.courseid;

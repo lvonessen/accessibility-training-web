@@ -47,12 +47,12 @@ class App extends React.Component {
 	}
 
   lookUp(courseID){
-    var ind = this.states.lookupTable[courseID];
-    if (ind != undefined){
-      console.log("Course exists!: "+ind)
-      return courses[ind];
+    var ind = this.state.lookupTable[courseID];
+    // course exists (and it's on our list?)
+    if (ind != undefined) { // && this.state.courses.indexOf(courseIndex) > -1) {
+        return courses[ind];
     }
-    return ind;
+    return undefined;
   }
 
 	isSelected(courseIndex){
