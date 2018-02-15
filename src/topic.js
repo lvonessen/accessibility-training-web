@@ -19,7 +19,7 @@ class Topic extends React.Component {
 
 	render() {
 
-		var courseid = this.props.courseid;
+		var courseId = this.props.courseId;
 		// json
 		var topic = topics[this.props.id];
 		var arg = this.props.arg;

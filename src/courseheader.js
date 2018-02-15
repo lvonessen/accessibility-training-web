@@ -24,15 +24,15 @@ class CourseHeader extends React.Component {
 
 		var path = this.props.path || "";
 
-		var courseid = this.props.courseid;
+		var courseId = this.props.courseId;
 		var coursetopics = this.props.coursetopics;
 
 		var rows = [];
 		for (var i=0; i < coursetopics.length; i++){
 			var topicid = coursetopics[i].id;
-			var pathHeader = "/"+courseid+"/"+topicid;
+			var pathHeader = "/"+courseId+"/"+topicid;
 			if (i==0){
-				pathHeader = "/"+courseid;
+				pathHeader = "/"+courseId;
 			}
 			rows.push(<li key={topicid} role="presentation" className={this.isActive(path,pathHeader,i) ? "active" : ""}><Link to={pathHeader}>{topics[topicid].name}</Link></li>);
 		}

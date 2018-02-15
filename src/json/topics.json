@@ -20,6 +20,6 @@
 		"name": "Exposing Structure",
 		"flavormap": {
 			"full": ["lo_sr","lo_struct_word","lo_struct_html", "lo_pdf","lo_gp"]
-		}	
+		}
 	}
 }

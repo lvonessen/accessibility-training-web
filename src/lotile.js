@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { NestedList } from './nestedlist';
 
 class LOTile extends React.Component {
-	
+
 	// if it's a string, wrap it as a list element
 	// if it's a list, wrap its elements in a list
 	/*listToHtml(list,rows) {
@@ -19,18 +19,26 @@ class LOTile extends React.Component {
 			return rows;
 		}
 	}*/
-	
+
 	render() {
-		
+
 		// set-up things:
-		
+		//console.log(this.props.material)
+
 		var material = (<NestedList list={this.props.material} id={this.props.id+"_material"} key={this.props.id+"_material"}/>)
-		
-		var options = (<NestedList list={this.props.options} id={this.props.id+"_options"} key={this.props.id+"_options"}/>)
+
+
+		//console.log(this.props.options)
+
+		var options = "";
+
+		if (this.props.options!= undefined){
+			options = (<NestedList list={this.props.options} id={this.props.id+"_options"} key={this.props.id+"_options"}/>)
+		}
 		//this.listToHtml(this.props.options,[]);
-		
+
 		var blah = "<ul> <li> Hi </li> </ul>";
-			
+
 		// return things:
 		{/* [
 	{
@@ -44,7 +52,7 @@ class LOTile extends React.Component {
 
 		return (
 			<div name={ this.props.name } className="lotile ws-bottom">
-				
+
 				<h3>{this.props.name }</h3>
 				<p> {this.props.arg } </p>
 				<div>{material}</div>

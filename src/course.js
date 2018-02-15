@@ -7,58 +7,43 @@ import { Topic } from './topic';
 import { Unknown } from './unknown';
 
 import 'bootstrap';
+var topics = require('./json/topics');
 
 class Course extends React.Component {
 	render() {
 		var currentRoute = this.props.currentRoute;
 		// don't want the beginning "/", also want to ignore anything after the next "/", if anything
-		var courseid = (currentRoute.split("/"))[1];
+		var pathSplit = currentRoute.split("/");
+		var courseId = pathSplit[1];
+		var topicId = pathSplit[2];
+		//console.log(pathSplit);
+		//console.log(topicId);
 
-		var course = this.props.lookUp(courseid);
+		var course = this.props.lookUpCourseJson(courseId);
 
-		if (course == undefined){
-			console.log ("Oh nos! That course doesn't exist")
+		if (topicId == undefined || topicId == ""){
+			topicId = course.topics[0].id;
+		}
+		var topic = this.props.lookUpCourseTopicJson(courseId,topicId);
+			//console.log (course)
+			//console.log(topic)
+
+		if (course == undefined || topic == undefined){
+			console.log ("Oh nos! That course or topic doesn't exist")
 			// This is proper syntax. Yay!
 			return (
 				<Route component={Unknown}/>
 			)
 		} else {
 
-			// from course json, not from topics json
-			var topics = course.topics;
-
-			var rows = [];
-			var topic;
-			var pathname;
-			for (var i = 0; i<topics.length; i++){
-				topic = topics[i];
-
-				// first row has different pathname
-				if (i==0)
-				{
-					pathname = "/"+courseid;
-				}else{
-					pathname = "/"+courseid+"/"+topic.id;
-				}
-
-				/* https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
-					tells how to pass extra props to the component */
-				rows.push( <Route key={topic.id} path={pathname}
-						render={() => (<Topic {...topic} courseid={courseid}/>)}
-						/> );
-			}
-
 			return (
 				<div className="container">
-					<CourseHeader path={currentRoute} courseid={courseid} coursetopics={topics}/>
+					<CourseHeader path={currentRoute} courseId={courseId} coursetopics={course.topics}/>
 
 					{/* potentially have an intro page before the different topics?
 						 then again "intro" is a pretty good lead-in regardless. */}
 
-					<Switch>
-						{rows}
-						<Route path="*" component={Unknown}/>
-					</Switch>
+					<Topic {...topic} path={currentRoute} courseId={courseId}/>
 
 				</div>
 			)

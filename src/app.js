@@ -31,26 +31,48 @@ class App extends React.Component {
 		this.isSelected = this.isSelected.bind(this);
 		this.clickCourse = this.clickCourse.bind(this);
 
-		this.lookUp = this.lookUp.bind(this);
+		this.lookUpCourseJson = this.lookUpCourseJson.bind(this);
+    this.lookUpCourseTopicJson = this.lookUpCourseTopicJson.bind(this);
 
-    var lookupTable = new Object();
+    var lookUpCourseIndexTable = new Object();
     for (var i=0; i<courses.length; i++){
-			lookupTable[courses[i].id] = i;
+			lookUpCourseIndexTable[courses[i].id] = i;
+		}
+
+    var lookUpCourseTopicTable = new Object();
+    for (var i=0; i<courses.length; i++){
+			lookUpCourseTopicTable[courses[i].id] = new Object();
+      for (var j=0; j<courses[i].topics.length; j++){
+        lookUpCourseTopicTable[courses[i].id][courses[i].topics[j].id] = j;
+      }
 		}
 
 		// eventually courses will start out empty
 		// list of relevant course *INDICES*
 		this.state = {
       	courses: [0],
-        lookupTable: lookupTable
+        lookUpCourseIndexTable: lookUpCourseIndexTable,
+        lookUpCourseTopicTable: lookUpCourseTopicTable
 		};
 	}
 
-  lookUp(courseID){
-    var ind = this.state.lookupTable[courseID];
+  lookUpCourseJson(courseID){
+    var ind = this.state.lookUpCourseIndexTable[courseID];
     // course exists (and it's on our list?)
     if (ind != undefined) { // && this.state.courses.indexOf(courseIndex) > -1) {
         return courses[ind];
+    }
+    return undefined;
+  }
+
+  lookUpCourseTopicJson(courseID,topicID){
+    var course = this.lookUpCourseJson(courseID);
+    // course exists (and it's on our list?)
+    if (course != undefined) { // && this.state.courses.indexOf(courseIndex) > -1) {
+        var topInd = this.state.lookUpCourseTopicTable[courseID][topicID];
+        if (topInd != undefined){
+          return course.topics[topInd];
+        }
     }
     return undefined;
   }
@@ -72,7 +94,7 @@ class App extends React.Component {
 		}
 
 		// have to change state like this otherwise everything breaks!!!
-		this.setState({courses: state.courses, lookupTable: this.state.lookupTable});
+		this.setState({courses: state.courses, lookUpCourseIndexTable: this.state.lookUpCourseIndexTable});
 
 	}
 
@@ -81,14 +103,14 @@ class App extends React.Component {
 		var currentRoute = this.props.location.pathname;
 
 		// HERE is where courses get information passed to them
-		var courseRoutes = [];
-		for (var i=0; i<courses.length; i++){
-			var coursei = courses[i];
-      console.log(coursei);
-      // ...coursei probably only gets evaluated down below, so it's stuck at class2
-			courseRoutes.push(<Route key={coursei.id} path={"/"+coursei.id} render={() => (<Course {...coursei} currentRoute={currentRoute}/>)}
-					/>);
-		}
+		// var courseRoutes = [];
+		// for (var i=0; i<courses.length; i++){
+		// 	var coursei = courses[i];
+    //   console.log(coursei);
+    //   // ...coursei probably only gets evaluated down below, so it's stuck at class2
+		// 	courseRoutes.push(<Route key={coursei.id} path={"/"+coursei.id} render={() => (<Course {...coursei} currentRoute={currentRoute}/>)}
+		// 			/>);
+		// }
 
 		return (
 			<div className="container">
@@ -108,8 +130,8 @@ class App extends React.Component {
           <Route path="/slides" component={Unknown}/>
 
 					{/* shorthand for the individual course pages*/ /* {courseRoutes} */}
-          <Route path={"/:course"}
-					render={() => (<Course lookUp={this.lookUp} currentRoute={currentRoute}/>)}
+          <Route path={"/:course/:topic?"}
+					render={() => (<Course lookUpCourseJson={this.lookUpCourseJson} lookUpCourseTopicJson={this.lookUpCourseTopicJson} currentRoute={currentRoute}/>)}
 					/>
 
 					{/* would have to be at the end because it will
