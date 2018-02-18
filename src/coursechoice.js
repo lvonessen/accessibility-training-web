@@ -18,7 +18,7 @@ class CourseChoice extends React.Component {
 
 	render() {
 
-		// var activePeople = _.map(_.filter(courses, { 'area': "applications" }), (course) => { return <CourseOption {...course} key={course.id} />; });
+		var appCourses = _.map(_.filter(courses, { 'area': "applications" }), (course) => { return (<li key={course.id} role="presentation"><CourseOption course={course.id} name={course.name} update={this.props.update} selected={this.props.isSelected}></CourseOption></li>); });
 
 		var courseoptions = [];
 		for (var i = 0; i<courses.length; i++){
@@ -31,6 +31,7 @@ class CourseChoice extends React.Component {
 			<div className="container">
 				<ul>
 				{courseoptions}
+				{appCourses}
 				</ul>
 
 			</div>
