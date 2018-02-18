@@ -18,11 +18,13 @@ class CourseChoice extends React.Component {
 
 	render() {
 
+		// var activePeople = _.map(_.filter(courses, { 'area': "applications" }), (course) => { return <CourseOption {...course} key={course.id} />; });
+
 		var courseoptions = [];
 		for (var i = 0; i<courses.length; i++){
 			var course = courses[i];
 			// pass course *INDEX* into update to toggle selection
-			courseoptions.push(<li key={course.id} role="presentation"><CourseOption course={i} name={course.name} update={this.props.update} selected={this.props.isSelected}></CourseOption></li>);
+			courseoptions.push(<li key={course.id} role="presentation"><CourseOption course={course.id} name={course.name} update={this.props.update} selected={this.props.isSelected}></CourseOption></li>);
 		}
 
 		return (

@@ -81,9 +81,12 @@ class App extends React.Component {
 		return this.state.courses.indexOf(courseIndex) > -1;
 	}
 
-	clickCourse(courseIndex) {
+	clickCourse(courseName) {
 		var state = this.state;
-
+    var courseIndex = this.state.lookUpCourseIndexTable[courseName];
+    if (courseIndex == undefined){
+      courseIndex = -1;
+    }
 		var index = state.courses.indexOf(courseIndex);
 
 		if (index > -1) {
