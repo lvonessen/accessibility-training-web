@@ -25,7 +25,7 @@
 	{
 		"id": "class2",
 		"name": "Class 2",
-		"area": "core",
+		"area": "theory",
 		"descrip": "Something about common topics in web development courses.",
 		"topics": [
 			{
