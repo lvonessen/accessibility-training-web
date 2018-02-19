@@ -56,8 +56,8 @@ class LOTile extends React.Component {
 			<div name={ this.props.name } className="lotile ws-bottom">
 
 				<h3><Interweave tagName="span" content={this.props.name}/></h3>
-				{/*<h3>{this.props.name }</h3>*/}
-				<p> {this.props.arg } </p>
+				{/*<h3>{this.props.name }</h3>
+				<p> {this.props.arg } </p>*/}
 				<div>{material}</div>
 			</div>
 		)
