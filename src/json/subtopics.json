@@ -1,9 +1,9 @@
 {
 	"lo_what": {
 		"id": "lo_what",
-		"name": "Accessibility is about designing to take into account all kinds of abilities",
+		"name": "Accessibility is about making technology &ldquo;usable by everyone, regardless of their abilities or disabilities&rdquo;*",
 		"arg": "This is important to web development because... (LO argument)",
-		"material": [ "point 1", "point 2", ["subpoint1", "subpoint2"], "point 3" ],
+		"material": "<p><span>*(</span><a href=\"http://teachaccess.org/about/\"><span>http://teachaccess.org/about/</span></a><span>). </span></p> <p><em><span>&ldquo;People have all kinds of ability. If you design without accounting for variation in ability, your design will fail. Designs that account for all abilities are called accessible designs.&rdquo; (Andy Ko)</span></em></p> <p><span>According to the World Health Organization,</span></p> <p><span>&ldquo;Disability is not just a health problem. It is a complex phenomenon, reflecting the interaction between features of a person&rsquo;s body and features of the society in which he or she lives.&rdquo;</span></p> <p><span>To put this more concretely, not being able to hear your conversational partner is no hindrance if you are speaking to each other in sign language.</span></p>",
 		"options": [ "brief", "indepth", "activity" ]
 	},
 	"lo_kinds": {
