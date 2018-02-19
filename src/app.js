@@ -8,6 +8,7 @@ import { Topic } from './topic';
 import { Course } from './course';
 import { Intro } from './intro';
 import { Unknown } from './unknown';
+import { GenSlides } from './genslides';
 
 import 'bootstrap';
 
@@ -130,7 +131,8 @@ class App extends React.Component {
 					{/* hi
 					*/}
 
-          <Route path="/slides" component={Unknown}/>
+          {/* For now, state-less */}
+          <Route path="/slides" component={GenSlides}/>
 
 					{/* shorthand for the individual course pages*/ /* {courseRoutes} */}
           <Route path={"/:course/:topic?"}

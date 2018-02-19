@@ -33,7 +33,7 @@ class Header extends React.Component {
 							{/* Where you click to get taken to information relevant to that course */}
 							{courselinks}
 
-							<li key="slides" role="presentation" className={path.startsWith("/slides") ? "active" : ""}><Link to="/slides">Generate materials</Link></li>
+							<li key="slides" role="presentation" className={path.startsWith("/slides") ? "active" : ""}><Link to="/slides">Get materials</Link></li>
 
 						</ul>
 			        </nav>
