@@ -12,7 +12,7 @@ import { GenSlides } from './genslides';
 
 import 'bootstrap';
 
-var webRoot = "/";
+var webRoot = "/~laurav4/access";
 var courses = require('./json/courses');
 
 // Polyfill startsWith

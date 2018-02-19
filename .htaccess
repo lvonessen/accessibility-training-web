@@ -7,7 +7,8 @@ AddType text/cache-manifest .manifest
 # Rewrite any non-existent files and directories to the index.html file, allowing
 # our single page web app to do the routing on the front end.
 RewriteEngine On
-RewriteBase /ajko
+# old line: RewriteBase /ajko
+RewriteBase /~laurav4/access
 RewriteRule (^index\.html$) - [L] 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
