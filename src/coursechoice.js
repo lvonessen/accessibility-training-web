@@ -21,8 +21,8 @@ class CourseChoice extends React.Component {
 
 		var appCourses = _.map(_.filter(courses, { 'area': "applications" }), (course) => { return (<li key={course.id} role="presentation"><CourseOption course={course.id} name={course.name} update={this.props.update} selected={this.props.isSelected}></CourseOption></li>); });
 
-		var areas = ["applications", "prog_sys", "systems","theory","ai"];
-		var prettyAreas = ["Applications", "Programming Systems", "Systems","Theory","AI"];
+		var areas = ["applications", "prog_sys", "systems","theory","ai","other"];
+		var prettyAreas = ["Applications", "Programming Systems", "Systems","Theory","AI","Other"];
 
 		var rows = [];
 		var courseSubset = [];

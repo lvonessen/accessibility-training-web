@@ -23,19 +23,417 @@
 		]
 	},
 	{
-		"id": "class2",
-		"name": "Class 2",
-		"area": "theory",
-		"descrip": "Something about common topics in web development courses.",
+		"id": "mobi",
+		"name": "Mobile Development",
+		"area": "applications",
+		"descrip": "",
 		"topics": [
 			{
 				"id": "intro",
-				"arg": "It's important to define accessibility to your students because they may not have seen it before and knowing about it is becoming a requirement in modern web development. Etc etc (argument for topic i.e. group of LOs)",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
 				"flavor": "default"
-			},
+			}
+		]
+	},
+	{
+		"id": "datasci",
+		"name": "Data Science",
+		"area": "applications",
+		"descrip": "",
+		"topics": [
 			{
-				"id": "top2",
-				"arg": "It's important to define accessibility to your students because they may not have seen it before and knowing about it is becoming a requirement in modern web development. Etc etc (argument for topic i.e. group of LOs)",
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "vis",
+		"name": "Visualization",
+		"area": "applications",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "cvis",
+		"name": "Computer Vision",
+		"area": "applications",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "graphics",
+		"name": "Computer Graphics",
+		"area": "applications",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "sec",
+		"name": "Security and Privacy",
+		"area": "applications",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "nlp",
+		"name": "Natural Language Processing",
+		"area": "applications",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "hci",
+		"name": "Human-Computer Interaction",
+		"area": "applications",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "robots",
+		"name": "Robotics",
+		"area": "applications",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "introcs",
+		"name": "Introduction to Computer Science",
+		"area": "prog_sys",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "introc",
+		"name": "Introduction to C/Bash",
+		"area": "prog_sys",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "swdesign",
+		"name": "Software Design",
+		"area": "prog_sys",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "pl",
+		"name": "Programming Languages",
+		"area": "prog_sys",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "db",
+		"name": "Databases",
+		"area": "prog_sys",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "swe",
+		"name": "Software Engineering",
+		"area": "prog_sys",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "discrete",
+		"name": "Discrete Structures",
+		"area": "theory",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "datastruct",
+		"name": "Data Structures",
+		"area": "theory",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "algo",
+		"name": "Algorithms",
+		"area": "theory",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "automata",
+		"name": "Automata and Grammars",
+		"area": "theory",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "compl",
+		"name": "Complexity",
+		"area": "theory",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "assembly",
+		"name": "Computer Organization (Assembly/Hardware)",
+		"area": "systems",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "parallel",
+		"name": "Parallel/Distributed Programming",
+		"area": "systems",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "os",
+		"name": "Operating Systems",
+		"area": "systems",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "compilers",
+		"name": "Compilers",
+		"area": "systems",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "networks",
+		"name": "Networks",
+		"area": "systems",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "embedded",
+		"name": "Embedded Systems",
+		"area": "systems",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "ai",
+		"name": "Artificial Intelligence",
+		"area": "ai",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "ml",
+		"name": "Machine Learning",
+		"area": "ai",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "probstats",
+		"name": "Probability and Statistics in Computer Science",
+		"area": "applications|prog_sys|systems|theory|ai",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "browse",
+		"name": "Browse All Topics",
+		"area": "other",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "write",
+		"name": "Academic Writing Skills",
+		"area": "other",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"flavor": "default"
+			}
+		]
+	},
+	{
+		"id": "stub",
+		"name": "Stub Course Template",
+		"area": "applications|prog_sys|systems|theory|ai|other",
+		"descrip": "",
+		"topics": [
+			{
+				"id": "intro",
+				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
 				"flavor": "default"
 			}
 		]
