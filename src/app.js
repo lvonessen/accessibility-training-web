@@ -48,10 +48,10 @@ class App extends React.Component {
       }
 		}
 
-		// eventually courses will start out empty
+		// eventually courses will start out empty, not as [0]
 		// list of relevant course *INDICES*
 		this.state = {
-      	courses: [0],
+      	courses: [],
         lookUpCourseIndexTable: lookUpCourseIndexTable,
         lookUpCourseTopicTable: lookUpCourseTopicTable
 		};
