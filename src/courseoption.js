@@ -15,11 +15,13 @@ class CourseOption extends React.Component {
 
 		// return
 		return (
-
+			<span>
 			<label>
 				<input type="checkbox" onClick={() => this.props.update(this.props.course)}/>
 				{this.props.name}
 			</label>
+			<br />
+			</span>
 
 		)
 	}
