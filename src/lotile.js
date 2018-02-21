@@ -5,21 +5,22 @@ import Interweave from 'interweave';
 
 class LOTile extends React.Component {
 
-	// if it's a string, wrap it as a list element
-	// if it's a list, wrap its elements in a list
-	/*listToHtml(list,rows) {
-		if (typeof list === 'string' ){
-			rows.push(<li> {list} </li>);
-		} else {
-			var listLen = list.length;
-			rows.push((<ul>));
-			for (var i = 0; i < listLen; i++) {
-				this.listToHtml(list[i],rows);
-			}
-			rows.push((</ul>));
-			return rows;
-		}
-	}*/
+	constructor(props) {
+      super(props);
+      /* set the initial checkboxState to true */
+      this.state = {
+        marked: false,
+				value: "Mark for later"
+      }
+  }
+
+	toggle(event) {
+		var newValue =  !this.state.marked;
+    this.setState({
+      marked: newValue,
+			value: (newValue ? "Saved" : "Mark for later")
+    });
+  }
 
 	render() {
 
@@ -59,6 +60,7 @@ class LOTile extends React.Component {
 				{/*<h3>{this.props.name }</h3>
 				<p> {this.props.arg } </p>*/}
 				<div>{material}</div>
+				<label><input type="button" onClick={this.toggle.bind(this)} className={this.state.marked ? "marked":"mark"} value={this.state.value}/></label>
 			</div>
 		)
 	}

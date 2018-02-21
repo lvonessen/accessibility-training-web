@@ -36,7 +36,7 @@ class CourseChoice extends React.Component {
 		return (
 			<div className="container">
 				<h2>Course Choice</h2>
-				Choose from among the following courses (organized into course areas) in order to see accessibility topics personalized to that course.
+				Choose from among the following courses (organized into course areas) in order to see accessibility topics personalized to that course. Once you choose an option, it will appear in the header above.
 				{rows}
 
 			</div>

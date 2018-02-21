@@ -26,13 +26,10 @@ class CourseOption extends React.Component {
 
 	render() {
 
-		// initial state
-		var check;
-		if (this.state.checkboxState){
-			check = (<input type="checkbox" onClick={() => this.props.update(this.props.course)} checked/>);
-		} else {
-			check = (<input type="checkbox" onClick={() => this.props.update(this.props.course)}/>);
-		}
+		const checkedOrNot = [];
+    // checkedOrNot.push(
+    //   <p>{this.state.checkboxState ? (<Link to={"/"+courseid}>Learn more about {coursename}</Link>) : ("") }</p>
+    // );
 
 		// return
 		return (
@@ -41,6 +38,7 @@ class CourseOption extends React.Component {
 				<input type="checkbox" onClick={this.toggle.bind(this)} checked={this.state.checkboxState} onChange={this.onChange.bind(this)}/>
 				{this.props.name}
 			</label>
+			{checkedOrNot}
 			<br />
 			</span>
 

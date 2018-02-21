@@ -35,7 +35,7 @@ class Intro extends React.Component {
 		var goaltext = ["Collecting accessibility knowledge all in one place",
 		"Personalizing it to specific course(s)", "Providing starter lecture materials to make it easier to incorporate accessibility a slide or slide deck at a time"];
 
-		var overviewtext = ["You pick out the course(s) for which you want to find out if there’s an accessibility connection","Those get added to the header and you can explore them!",["We tried to pick out only relevant topics, and include some information about how they might be incorporated into that specific class"],"At the end you can download a custom slide deck which you can modify or take specific individual slides from to augment your own lectures if you so choose"];
+		var overviewtext = ["You pick out your course(s)","You explore a course's accessibility topics and save subtopics for later","At the end you get a slide deck tailored to your choices (not yet implemented)"];
 
 
 				var goals = (<NestedList list={goaltext} id={"goaltext"} key={"goaltext"}/>);
@@ -49,11 +49,19 @@ class Intro extends React.Component {
 			<div name="welcome" className="welcome ws-bottom">
 
 				<h2>Overview</h2>
-				<p> This tool is designed to present a subset of accessibility topics related to a specific course, to support faculty (you) in integrating them into computer science courses without needing to scour the internet for course-specific materials. Its main goals are: </p>
-				{goals}
+				<p>
+				Companies in industry, like Google, Facebook, Microsoft, and Adobe, to name just a few, need not just more accessibility experts but also way more people who know even a little about accessibility.
+				Due to legal scrutiny, corporate policies, and user expectations, this trend will only continue.
+				One of the most straight-forward ways to increase the number of people with knowledge of accessibility is to incorporate it into existing computer science courses.
+				</p><p>
+				This tool is designed to make that easier for you by presenting accessibility topics in a way that is specifically tailored to your course(s). The goal is to reduce the effort required to figure out how topics are relevant and how they fit into existing course topics. Please note that this is a prototype and is not intended to convey exhaustive topic coverage for any one course.
+				{/*This tool is designed to present a subset of accessibility topics related to a specific course, to support faculty (you) in integrating them into computer science courses without needing to scour the internet for course-specific materials. Its main goals are:*/}
+				</p>
 
 				<p> The way it works: </p>
 				{overview}
+
+				<Link to="/coursechoice" className="start">Get started</Link>
 
 				{/*{welcome}*/}
 			</div>

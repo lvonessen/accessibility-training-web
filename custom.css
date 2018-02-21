@@ -101,35 +101,43 @@ a:hover {
 	border: none !important;
 }
 
-/* https://css-tricks.com/examples/ShapesOfCSS/ 
-.pointer { 
-	height: 40px; 
-	position: relative; 
-	background: red; 
-} 
-.pointer:after { 
-	content: ""; 
-	position: absolute; 
-	left: 0; 
-	bottom: 0; 
-	width: 0;
-	height: 0; 
-	border-left: 20px solid white; 
-	border-top: 20px solid transparent; 
-	border-bottom: 20px solid transparent; 
-} 
-.pointer:before { 
-	content: ""; 
-	position: absolute; 
-	right: -20px; 
-	bottom: 0; 
-	width: 0; 
-	height: 0; 
-	border-left: 20px solid red; 
-	border-top: 20px solid transparent; 
-	border-bottom: 20px solid transparent; 
+.start {
+	padding: 10px 15px;
+	background-color: #337AB7;
+	color: white;
+	display: inline-block;
+    margin-bottom: 3px;
+    border-radius: 3px;
 }
-*/
+
+.start:hover {
+	color: white;
+}
+
+.mark {
+	padding: 10px;
+	width: 150px;
+	background-color: white;
+	color: black;
+	display: inline-block;
+    margin-bottom: 3px;
+    border-radius: 3px;
+    border-color: black;
+}
+
+.marked:hover {
+	color: white;
+}
+.marked {
+	padding: 10px;
+	width: 150px;
+	background-color: #337AB7;
+	color: white;
+	display: inline-block;
+    margin-bottom: 3px;
+    border-radius: 3px;
+    border-color: black;
+}
 
 /* https://stackoverflow.com/a/17957476 */
 .pointer {/*
