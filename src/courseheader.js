@@ -34,7 +34,7 @@ class CourseHeader extends React.Component {
 			if (i==0){
 				pathHeader = "/"+courseId;
 			}
-			rows.push(<li key={topicid} role="presentation" className={this.isActive(path,pathHeader,i) ? "active" : ""}><Link to={pathHeader}>{topics[topicid].name}</Link></li>);
+			rows.push(<li key={topicid} role="presentation" className={this.isActive(path,pathHeader,i) ? "active pointer pointer2" : "pointer pointer2"}><Link to={pathHeader}>{topics[topicid].name}</Link></li>);
 		}
 
 		return (

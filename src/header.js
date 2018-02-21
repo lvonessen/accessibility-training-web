@@ -16,7 +16,7 @@ class Header extends React.Component {
 			var courseindex = this.props.courses[i];
 			var courseid = courses[courseindex].id;
 			var coursename = courses[courseindex].name;
-			courselinks.push( <li key={courseid} role="presentation" className={path.startsWith("/"+courseid) ? "active" : ""}><Link to={"/"+courseid}>{coursename}</Link></li> );
+			courselinks.push( <li key={courseid} role="presentation" className={path.startsWith("/"+courseid) ? "active pointer pointer2" : "pointer pointer2"}><Link to={"/"+courseid}>{coursename}</Link></li> );
 		}
 
 		return (
@@ -27,13 +27,13 @@ class Header extends React.Component {
 			        <nav>
 						<ul className="nav nav-pills">
 
-							<li key="intro" role="presentation" className={path === "/" ? "active" : ""}><Link to="/">Introduction</Link></li>
-							<li key="coursechoice" role="presentation" className={path.startsWith("/coursechoice") ? "active" : ""}><Link to="/coursechoice">Choose your courses</Link></li>
+							<li key="intro" role="presentation" className={path === "/" ? "active pointer pointer2" : "pointer pointer2"}><Link to="/">Introduction</Link></li>
+							<li key="coursechoice" role="presentation" className={path.startsWith("/coursechoice") ? "active pointer pointer2" : "pointer pointer2"}><Link to="/coursechoice">Choose your courses</Link></li>
 
 							{/* Where you click to get taken to information relevant to that course */}
 							{courselinks}
 
-							<li key="slides" role="presentation" className={path.startsWith("/slides") ? "active" : ""}><Link to="/slides">Get materials</Link></li>
+							<li key="slides" role="presentation" className={path.startsWith("/slides") ? "active pointer pointer2" : "pointer pointer2"}><Link to="/slides">Get materials</Link></li>
 
 						</ul>
 			        </nav>
