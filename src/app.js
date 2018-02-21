@@ -78,8 +78,9 @@ class App extends React.Component {
     return undefined;
   }
 
-	isSelected(courseIndex){
-		return this.state.courses.indexOf(courseIndex) > -1;
+	isSelected(courseID){
+    var ind = this.state.lookUpCourseIndexTable[courseID];
+		return this.state.courses.indexOf(ind) > -1;
 	}
 
 	clickCourse(courseName) {
