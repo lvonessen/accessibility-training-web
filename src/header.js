@@ -28,7 +28,7 @@ class Header extends React.Component {
 						<ul className="nav nav-pills">
 
 							<li key="intro" role="presentation" className={path === "/" ? "active pointer pointer2" : "pointer pointer2"}><Link to="/">Introduction</Link></li>
-							<li key="coursechoice" role="presentation" className={path.startsWith("/coursechoice") ? "active pointer pointer2" : "pointer pointer2"}><Link to="/coursechoice">Choose your courses</Link></li>
+							<li key="coursechoice" role="presentation" className={path.startsWith("/coursechoice") ? "active pointer pointer2" : "pointer pointer2"}><Link to="/coursechoice">Choose your course(s)</Link></li>
 
 							{/* Where you click to get taken to information relevant to that course */}
 							{courselinks}

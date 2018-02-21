@@ -57,13 +57,14 @@ class GenSlides extends React.Component {
 			<div name="welcome" className="welcome ws-bottom">
 
 				<h2>Get Course Materials</h2>
-				<p> As the final step of this tool, here are some slides to use, edit, or cull individual slides from: </p>
-				<ul >
+				<p> As the final step of this tool, eventually you'll be able to get slides here based on the topics you marked for later. </p>
+				{/*}<ul >
 
-					<li key="intro_pptx" role="presentation" className=""><a href="/slides/intro.pptx">Intro to Accessibility.pptx</a></li>
-					<li key="intro_pdf" role="presentation" className="active"><a href="/slides/intro.pdf">Intro to Accessibility.pdf</a></li>
+					<li key="intro_pptx" role="presentation" className=""><a href="/~laurav4/access/slides/intro.pptx">Intro to Accessibility.pptx</a></li>
+					<li key="intro_pdf" role="presentation" className="active"><a href="/~laurav4/access/slides/intro.pdf">Intro to Accessibility.pdf</a></li>
 
 				</ul>
+				*/}
 			</div>
 		)
 	}

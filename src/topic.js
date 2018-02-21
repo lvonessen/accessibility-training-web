@@ -45,7 +45,7 @@ class Topic extends React.Component {
 		}
 		return (
 			<div>
-				<h2 name={topic.id}>{topic.name}</h2>
+				<h2 name={topic.id}>{/*topic.name*/this.props.courseName}</h2>
 				<p> {arg} </p>
 				<div>{subtopiclist}</div>
 			</div>

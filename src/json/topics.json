@@ -4,7 +4,15 @@
 		"name": "Introduction to Accessibility",
 		"flavormap": {
 				"default": [ "lo_what", "lo_kinds" ],
-				"full": [ "lo_what", "lo_kinds", "lo_div", "lo_who", "lo_num", "lo_models", "lo_tech_models" ]
+				"full": [ "lo_what", "lo_kinds", "lo_div", "lo_who", "lo_num", "lo_models", "lo_tech_models" ],
+				"mob": [ "lo_kinds_mob"]
+		}
+	},
+	"mobi": {
+		"id": "intro",
+		"name": "Mobile Accessibility",
+		"flavormap": {
+				"mob": [ "lo_mob_frame","lo_kinds_mob"]
 		}
 	},
 	"top2": {
@@ -19,7 +27,34 @@
 		"id": "exp_struct",
 		"name": "Exposing Structure",
 		"flavormap": {
-			"full": ["lo_sr","lo_struct_word","lo_struct_html", "lo_pdf","lo_gp"]
+			"full": ["lo_sr","lo_struct_word","lo_struct_html", "lo_pdf","lo_gp"],
+				"web": ["lo_sr","lo_struct_html","lo_gp"]
+		}
+	},
+	"cvis": {
+		"id": "cvis",
+		"name": "Computer Vision",
+		"flavormap": {
+				"default": [ "lo_vis_obj", "lo_vis_other" ]
+		}
+	},
+	"hci": {
+		"id": "hci",
+		"flavormap": {
+				"default": [ "lo_kinds_hci", "lo_design" ]
+		}
+	},
+	"nlp": {
+		"id": "nlp",
+		"flavormap": {
+				"default": [ "lo_nlp_hist", "lo_nlp_future" ]
+		}
+	},
+	"robo": {
+		"id": "robo",
+		"flavormap": {
+				"default": [ "lo_robo" ]
 		}
 	}
+
 }

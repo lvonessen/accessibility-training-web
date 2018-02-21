@@ -52,9 +52,9 @@ class Intro extends React.Component {
 				<p>
 				Companies in industry, like Google, Facebook, Microsoft, and Adobe, to name just a few, need not just more accessibility experts but also way more people who know even a little about accessibility.
 				Due to legal scrutiny, corporate policies, and user expectations, this trend will only continue.
-				One of the most straight-forward ways to increase the number of people with knowledge of accessibility is to incorporate it into existing computer science courses.
+				{/*One of the most straight-forward ways to increase the number of people with knowledge of accessibility is to incorporate it into existing computer science courses.*/}
 				</p><p>
-				This tool is designed to make that easier for you by presenting accessibility topics in a way that is specifically tailored to your course(s). The goal is to reduce the effort required to figure out how topics are relevant and how they fit into existing course topics. Please note that this is a prototype and is not intended to convey exhaustive topic coverage for any one course.
+				This tool is designed to reduce your effort to figure out how accessibility can fit into your course topics with only small changes. Please note that this is a prototype and is not intended to convey exhaustive topic coverage for any one course.
 				{/*This tool is designed to present a subset of accessibility topics related to a specific course, to support faculty (you) in integrating them into computer science courses without needing to scour the internet for course-specific materials. Its main goals are:*/}
 				</p>
 

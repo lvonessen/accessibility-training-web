@@ -38,12 +38,12 @@ class Course extends React.Component {
 
 			return (
 				<div className="container">
-					<CourseHeader path={currentRoute} courseId={courseId} coursetopics={course.topics}/>
+					{/*<CourseHeader path={currentRoute} courseId={courseId} coursetopics={course.topics}/> */}
 
 					{/* potentially have an intro page before the different topics?
 						 then again "intro" is a pretty good lead-in regardless. */}
 
-					<Topic {...topic} path={currentRoute} courseId={courseId}/>
+					<Topic {...topic} path={currentRoute} courseId={courseId} courseName={course.name}/>
 
 				</div>
 			)

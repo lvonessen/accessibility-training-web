@@ -6,15 +6,15 @@
 		"descrip": "Something about common topics in web development courses.",
 		"topics": [
 			{
+				"id": "exp_struct",
+				"arg": "Most web development courses include a component on HTML. A major part of HTML is its structure. It is this same structure that is leveraged by screen readers to enable blind or low-vision people to interact with the web. Thus, this is a good place to introduce the concept of accessibility.",
+				"flavor": "web"
+			},
+			{
 				"id": "intro",
 				"arg": "It's important to define accessibility to your students because they may not have seen it before and knowing about it is becoming a requirement in modern web development. Etc etc (argument for topic i.e. group of LOs)",
 				"flavor": "default"
 			},
-			{
-				"id": "exp_struct",
-				"arg": "We use structure to organize text all the time in our daily lives--books are organized into chapters, papers into sections, slides into bulleted lists, italics to place emphasis on certain words, etc. Frequently, this is conveyed visually through for example headers with larger font or circles before list elements. However, this structure is especially important when people can’t see the page, because the two dimensional page that eyes can easily skim otherwise becomes a linear stream of words read aloud by a screen reader (software commonly used by people who are blind or have dyslexia). However, there are ways to expose this structure to screen readers, allowing more targeted navigation of content.",
-				"flavor": "full"
-				},
 			{
 				"id": "top2",
 				"arg": "It's important to define accessibility to your students because they may not have seen it before and knowing about it is becoming a requirement in modern web development. Etc etc (argument for topic i.e. group of LOs)",
@@ -29,9 +29,9 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
-				"flavor": "default"
+				"id": "mobi",
+				"arg": "Given how user-facing mobile applications are, it makes sense to discuss their accessibility.",
+				"flavor": "mob"
 			}
 		]
 	},
@@ -68,21 +68,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
-				"flavor": "default"
-			}
-		]
-	},
-	{
-		"id": "graphics",
-		"name": "Computer Graphics",
-		"area": "applications",
-		"descrip": "",
-		"topics": [
-			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "cvis",
+				"arg": "Vision’s main connection to accessibility is in its applications to accessibility problems.",
 				"flavor": "default"
 			}
 		]
@@ -107,8 +94,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "nlp",
+				"arg": "NLP’s main connection to accessibility is in its applications to accessibility problems.",
 				"flavor": "default"
 			}
 		]
@@ -120,8 +107,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "hci",
+				"arg": "Accessibility is a topic in its own right when it comes to human-computer interaction, but two main points of connection lie in interfaces and how people use them, and universal design methods.",
 				"flavor": "default"
 			}
 		]
@@ -133,8 +120,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "robo",
+				"arg": "There is an entire subfield of robotics devoted to accessibility, namely assistive robotics.",
 				"flavor": "default"
 			}
 		]
@@ -155,19 +142,6 @@
 	{
 		"id": "introc",
 		"name": "Introduction to C/Bash",
-		"area": "prog_sys",
-		"descrip": "",
-		"topics": [
-			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
-				"flavor": "default"
-			}
-		]
-	},
-	{
-		"id": "swdesign",
-		"name": "Software Design",
 		"area": "prog_sys",
 		"descrip": "",
 		"topics": [
