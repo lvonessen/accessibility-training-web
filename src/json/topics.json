@@ -55,6 +55,18 @@
 		"flavormap": {
 				"default": [ "lo_robo" ]
 		}
+	},
+	"sec": {
+		"id": "sec",
+		"flavormap": {
+				"default": [ "lo_sec_trade","lo_sec_metric" ]
+		}
+	},
+	"vis": {
+		"id": "vis",
+		"flavormap": {
+				"default": [ "lo_kinds_viz","lo_vis_vis" ]
+		}
 	}
 
 }

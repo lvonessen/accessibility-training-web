@@ -55,8 +55,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "vis",
+				"arg": "Since visualization is about sharing or communicating about data with people, it makes sense to talk about assumptions students might make about their audiences, as well as the actions that may be taken to make a visualization more accessible.",
 				"flavor": "default"
 			}
 		]
@@ -81,8 +81,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "sec",
+				"arg": "One of the great things about security is the way it takes everything in the world with a grain of salt. In the case of accessibility, this could mean showing that existing accessibility tools are insecure and thinking of ways to fix them, or it could mean developing novel ways to make sure people of all abilities can have the security and privacy they require.",
 				"flavor": "default"
 			}
 		]
