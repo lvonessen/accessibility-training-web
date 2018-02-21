@@ -67,6 +67,78 @@
 		"flavormap": {
 				"default": [ "lo_kinds_viz","lo_vis_vis" ]
 		}
+	},
+	"db": {
+		"id": "db",
+		"flavormap": {
+				"default": [ "lo_db_tools","lo_db_cases" ]
+		}
+	},
+	"cline": {
+		"id": "cline",
+		"flavormap": {
+				"default": [ "lo_c_intf","lo_c_hist" ]
+		}
+	},
+	"introcs": {
+		"id": "introcs",
+		"flavormap": {
+				"default": [ "lo_i_who" ]
+		}
+	},
+	"pl": {
+		"id": "pl",
+		"flavormap": {
+				"default": [ "lo_pl_syn" ]
+		}
+	},
+	"swe": {
+		"id": "swe",
+		"flavormap": {
+				"default": [ "lo_i_who","lo_sw_tools","lo_sw_reuse","lo_sw_reg" ]
+		}
+	},
+	"compilers": {
+		"id": "compilers",
+		"flavormap": {
+				"default": [ "lo_ast","lo_code_trans" ]
+		}
+	},
+	"os": {
+		"id": "os",
+		"flavormap": {
+				"default": [ "lo_os_case" ]
+		}
+	},
+	"nw": {
+		"id": "nw",
+		"flavormap": {
+				"default": [ "lo_nw_hist" ]
+		}
+	},
+	"ai": {
+		"id": "ai",
+		"flavormap": {
+				"default": [ "lo_nlp_hist", "lo_nlp_future", "lo_vis_obj", "lo_ai_bias" ]
+		}
+	},
+	"algo": {
+		"id": "algo",
+		"flavormap": {
+				"default": [ "lo_vis_other" ]
+		}
+	},
+	"embed": {
+		"id": "embed",
+		"flavormap": {
+				"default": [ "lo_embed" ]
+		}
+	},
+	"demo": {
+		"id": "demo",
+		"flavormap": {
+				"default": [ "lo_i_who" ]
+		}
 	}
 
 }

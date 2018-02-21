@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import { Link } from 'react-router-dom';
+import Interweave from 'interweave';
 
 import { LOTile }  from './lotile';
 
@@ -23,6 +24,14 @@ class Topic extends React.Component {
 		// json
 		var topic = topics[this.props.id];
 		var arg = this.props.arg;
+
+		var argDom = "";
+		if (arg.startsWith("<")){
+			argDom = (<Interweave tagName="span" content={arg}/>);
+		}else{
+			argDom = (<p>{arg}</p>);
+		}
+
 		var flavor = this.props.flavor;
 
 		// list of subtopic names
@@ -46,7 +55,7 @@ class Topic extends React.Component {
 		return (
 			<div>
 				<h2 name={topic.id}>{/*topic.name*/this.props.courseName}</h2>
-				<p> {arg} </p>
+				{argDom}
 				<div>{subtopiclist}</div>
 			</div>
 		);

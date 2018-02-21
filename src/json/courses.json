@@ -36,19 +36,6 @@
 		]
 	},
 	{
-		"id": "datasci",
-		"name": "Data Science",
-		"area": "applications",
-		"descrip": "",
-		"topics": [
-			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
-				"flavor": "default"
-			}
-		]
-	},
-	{
 		"id": "vis",
 		"name": "Visualization",
 		"area": "applications",
@@ -133,21 +120,21 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "introcs",
+				"arg": "One thing that many students in intro programming courses don’t have yet is a clear sense of who writes programs.",
 				"flavor": "default"
 			}
 		]
 	},
 	{
 		"id": "introc",
-		"name": "Introduction to C/Bash",
+		"name": "Introduction to the Command Line",
 		"area": "prog_sys",
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "cline",
+				"arg": "This class’s lectures on historical points seem the clearest connection to accessibility.",
 				"flavor": "default"
 			}
 		]
@@ -159,8 +146,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "pl",
+				"arg": "<p>Design of programming languages from a user perspective is an under-explored area of PL, but it&rsquo;s important because:</p><ol><li>PL that are hard to learn pose barriers to engaging youth in computing</li><li>PL that are error-prone cause software defects</li><li>PL that are used to analyze data in science lead to errors in scientific discovery.</li><li>All of the issues above can have immense economic changes, because retraining teachers and developers in the world is expensive.</li></ol><p>Any time you talk about users, that&rsquo;s a good time to consider how accessibility fits in (<a href=\"https://medium.com/bits-and-behavior/designing-learnable-teachable-and-productive-programming-languages-dagstuhl-trip-report-81e41bde84bd\">source of list</a>).</p>",
 				"flavor": "default"
 			}
 		]
@@ -172,8 +159,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "db",
+				"arg": "The connection to accessibility here lies in two main parts: the tools which are used to interact with databases, which may be more or less accessible, and examples of applications of databases.",
 				"flavor": "default"
 			}
 		]
@@ -185,34 +172,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
-				"flavor": "default"
-			}
-		]
-	},
-	{
-		"id": "discrete",
-		"name": "Discrete Structures",
-		"area": "theory",
-		"descrip": "",
-		"topics": [
-			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
-				"flavor": "default"
-			}
-		]
-	},
-	{
-		"id": "datastruct",
-		"name": "Data Structures",
-		"area": "theory",
-		"descrip": "",
-		"topics": [
-			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "swe",
+				"arg": "There are several points in a software engineering course where accessibility could be mentioned.",
 				"flavor": "default"
 			}
 		]
@@ -224,60 +185,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
-				"flavor": "default"
-			}
-		]
-	},
-	{
-		"id": "automata",
-		"name": "Automata and Grammars",
-		"area": "theory",
-		"descrip": "",
-		"topics": [
-			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
-				"flavor": "default"
-			}
-		]
-	},
-	{
-		"id": "compl",
-		"name": "Complexity",
-		"area": "theory",
-		"descrip": "",
-		"topics": [
-			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
-				"flavor": "default"
-			}
-		]
-	},
-	{
-		"id": "assembly",
-		"name": "Computer Organization (Assembly/Hardware)",
-		"area": "systems",
-		"descrip": "",
-		"topics": [
-			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
-				"flavor": "default"
-			}
-		]
-	},
-	{
-		"id": "parallel",
-		"name": "Parallel/Distributed Programming",
-		"area": "systems",
-		"descrip": "",
-		"topics": [
-			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "algo",
+				"arg": "One of the beauties of clever algorithms is how they take advantage of characteristics of the input space in order to work. This is also possible when applied to accessibility problems.",
 				"flavor": "default"
 			}
 		]
@@ -289,8 +198,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "os",
+				"arg": "<p>Operating systems provide the underpinnings for all software, so it makes sense that the accessibility services they provide go a long way toward encouraging or discouraging accessibility of the applications that run on them (<a href=\"https://homes.cs.washington.edu/~ansross/papers/assets2017-epidemiologyframework.pdf\">framework around the major factors that influence accessibility</a>). </p>",
 				"flavor": "default"
 			}
 		]
@@ -302,8 +211,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "compilers",
+				"arg": "Many students have trouble understanding why learning about compilers is still important today. Here are some applications involving accessibility.",
 				"flavor": "default"
 			}
 		]
@@ -315,8 +224,8 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "nw",
+				"arg": "Many networking achievements and protocols were originally created for people with disabilities.",
 				"flavor": "default"
 			}
 		]
@@ -328,47 +237,21 @@
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "embed",
+				"arg": "Many access technologies are examples of embedded systems.",
 				"flavor": "default"
 			}
 		]
 	},
 	{
 		"id": "ai",
-		"name": "Artificial Intelligence",
+		"name": "Artificial Intelligence/Machine Learning",
 		"area": "ai",
 		"descrip": "",
 		"topics": [
 			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
-				"flavor": "default"
-			}
-		]
-	},
-	{
-		"id": "ml",
-		"name": "Machine Learning",
-		"area": "ai",
-		"descrip": "",
-		"topics": [
-			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
-				"flavor": "default"
-			}
-		]
-	},
-	{
-		"id": "probstats",
-		"name": "Probability and Statistics in Computer Science",
-		"area": "applications|prog_sys|systems|theory|ai",
-		"descrip": "",
-		"topics": [
-			{
-				"id": "intro",
-				"arg": "This topic highlights different ways to introduce the concept of accessibility to students. Different subtopics may have different weight or usefulness depending how much time you may have available.",
+				"id": "ai",
+				"arg": "The main connections from AI or machine learning to accessibility lie in their applications. There is also a connection on the topic of bias, however.",
 				"flavor": "default"
 			}
 		]
