@@ -15,11 +15,11 @@
 
 python server.py
 
-###Use any browser to go to the following site:
+### Use any browser to go to the following site:
 
 http://127.0.0.1:8000 
 
-###Voila!
+### Voila!
 
 ## Editing the files
 
