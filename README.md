@@ -41,5 +41,7 @@ npm run watch
 
 ### but in that case make sure not to use 'git checkout' to change many files at once, because npm will try to build once per changed file and freeze your computer
 
+## Other files
 
+### I don't actually know which ones React.js needs and which are surplus. Sorry!
 
