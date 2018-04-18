@@ -11,6 +11,8 @@
 - custom.css
 - .htaccess
 
+(although technically speaking I think at the moment the 'slides/' directory is not used)
+
 ### To view it locally, navigate to the top folder of the project, and run:
 
 python server.py
