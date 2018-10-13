@@ -1,5 +1,12 @@
 # Accessibility Curriculum Resource Tool Readme
 
+This project was conceived in order to explore the possibility of micro professional development for computer science faculty with the goal of helping them incorporate accessibility topics in their courses. The version as of October 13, 2018 is currently hosted at https://homes.cs.washington.edu/~laurav4/access/. This work resulted in a publication at SIGCSE:
+
+Teaching Accessibility: A Design Exploration of Faculty Professional Development at Scale
+Saba Kawas, Laura Vonessen, and Andrew J. Ko (2019)
+ACM Technical Symposium on Computer Science Education (SIGCSE), Research Track, to appear.
+Describes and evaluates a vision for teaching higher education CS faculty how to integrate accessibility topics into their classes, discovering many personal and organizationl barriers to adoption.
+
 ## Using the files already in the repo
 
 ### To host this project online, you will need to upload:
