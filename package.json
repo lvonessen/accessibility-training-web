@@ -1,5 +1,5 @@
 {
-	"name": "UWFacultyPage",
+	"name": "UWAccTrain",
 	"version": "1.0.0",
 	"scripts": {
 		"build": "browserify -t [ babelify --presets [ react ] ] src/app.js | uglifyjs > build/app.js; echo done",
@@ -14,11 +14,11 @@
 	"dependencies": {
 		"babel-preset-react": "^6.24.1",
 		"babelify": "^7.3.0",
-		"bootstrap": "^3.3.6",
+		"bootstrap": "^4.1.2",
 		"history": "^4.7.2",
 		"interweave": "^8.0.2",
-		"jquery": "^1.12.0",
-		"lodash": "^4.17",
+		"jquery": "^3.0.0",
+		"lodash": "^4.17.11",
 		"react": "^15.6.2",
 		"react-dom": "^15.6.1",
 		"react-router-dom": "^4.2.2",
